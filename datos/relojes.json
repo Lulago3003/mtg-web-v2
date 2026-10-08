@@ -1,0 +1,245 @@
+{
+  "_nota": "Precios en USD de la lista de venta de MTG (oct-2026). 'existencias' por color. 'fuente' dice de dónde salen las funciones: manual del fabricante, protocolo de la familia, o 'por confirmar'. Después de editar, correr: python3 herramientas/generar.py",
+  "whatsapp": "50768873065",
+  "categorias": [
+    {"id": "ninos", "nombre": "Niños", "color": "azul"},
+    {"id": "mayores", "nombre": "Adultos mayores", "color": "naranja"},
+    {"id": "salud", "nombre": "Salud", "color": "rosa"},
+    {"id": "mascotas", "nombre": "Mascotas", "color": "verde"}
+  ],
+  "modelos": [
+    {
+      "modelo": "K-FA103",
+      "categoria": "ninos",
+      "nombre": "Reloj 4G para niños con videollamada",
+      "precio": 139,
+      "conexion": "sim",
+      "app": "SeTracker2",
+      "colores": [{"color": "Negro", "foto": "k-fa103.png", "existencias": 2}],
+      "funciones": [
+        "Ubicación en el mapa de su celular",
+        "Videollamada y llamadas de voz con los contactos que usted aprueba",
+        "Botón SOS: al mantenerlo presionado llama a su número de emergencia",
+        "Mensajes de voz entre el reloj y la app",
+        "Bloquea llamadas de números desconocidos",
+        "Historial de recorridos y apagado a distancia"
+      ],
+      "fuente": "manual K-FA103"
+    },
+    {
+      "modelo": "K-FA92",
+      "categoria": "ninos",
+      "nombre": "Reloj 4G con GPS para niños",
+      "precio": 139,
+      "conexion": "sim",
+      "colores": [
+        {"color": "Negro", "foto": "k-fa92-negro.png", "existencias": 5},
+        {"color": "Rosado", "foto": "k-fa92-rosado.png", "existencias": 1}
+      ],
+      "funciones": [
+        "Ubicación por GPS, WiFi y antenas celulares",
+        "Botón SOS",
+        "Llamadas con los contactos que usted aprueba",
+        "Mensajes de voz con la app",
+        "Zonas seguras: le avisa si sale de la casa o la escuela",
+        "Modo clase: silencia el reloj en horario escolar"
+      ],
+      "fuente": "por confirmar (protocolo ASR de niños, misma familia que FA103 y FA58P)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "K-H05G",
+      "categoria": "ninos",
+      "nombre": "Reloj 4G con GPS para niños",
+      "precio": 139,
+      "conexion": "sim",
+      "colores": [
+        {"color": "Negro", "foto": "k-h05g-negro.png", "existencias": 2},
+        {"color": "Azul", "foto": "k-h05g-azul.png", "existencias": 2},
+        {"color": "Rosado", "foto": "k-h05g-rosado.png", "existencias": 2}
+      ],
+      "funciones": [
+        "Ubicación GPS en su celular",
+        "Botón SOS",
+        "Llamadas con los contactos que usted aprueba",
+        "Mensajes de texto y de voz con la app"
+      ],
+      "fuente": "por confirmar (prueba con firmware H05M en septiembre: ubicación, SOS, texto y voz funcionaron)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "K-H11C",
+      "categoria": "ninos",
+      "nombre": "Reloj 4G para niños",
+      "precio": 149,
+      "conexion": "sim",
+      "colores": [{"color": "Azul", "foto": "k-h11c.png", "existencias": 1}],
+      "funciones": [
+        "Conexión 4G con su propia SIM",
+        "Ubicación desde la app",
+        "Llamadas con los contactos que usted aprueba",
+        "Botón SOS"
+      ],
+      "fuente": "por confirmar (sin manual)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "E-V28C",
+      "categoria": "mayores",
+      "nombre": "Rastreador 4G de bolsillo con botón SOS",
+      "precio": 119,
+      "conexion": "sim",
+      "colores": [
+        {"color": "Negro", "foto": "e-v28c-negro.png", "existencias": 1},
+        {"color": "Blanco", "foto": "e-v28c-blanco.png", "existencias": 1}
+      ],
+      "funciones": [
+        "Botón SOS grande al frente",
+        "Ubicación GPS con conexión 4G",
+        "Tamaño de bolsillo: va en el bolso, la cartera o la mochila"
+      ],
+      "fuente": "por confirmar (sin manual; lo demás sale de la foto)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "E-FA81",
+      "categoria": "mayores",
+      "nombre": "Rastreador delgado con botón SOS",
+      "precio": 129,
+      "conexion": "sim",
+      "colores": [{"color": "Negro", "foto": "e-fa81.png", "existencias": 2}],
+      "funciones": [
+        "Botón SOS: llama hasta a 3 números y avisa por la app y por SMS",
+        "Detección de caídas",
+        "Ubicación por GPS, WiFi y antenas, también bajo techo",
+        "Hasta 3 zonas seguras con aviso",
+        "Llamadas de voz",
+        "Historial de recorridos"
+      ],
+      "fuente": "manual E-FA81 y pruebas propias"
+    },
+    {
+      "modelo": "E-D17",
+      "categoria": "mayores",
+      "nombre": "Reloj de seguridad para adultos mayores",
+      "precio": 149,
+      "conexion": "sim",
+      "app": "SeTracker2",
+      "colores": [{"color": "Negro", "foto": "e-d17.png", "existencias": 2}],
+      "funciones": [
+        "Botón SOS: llama a la familia al mantenerlo 3 segundos",
+        "Contesta solo las llamadas de los números que usted elija",
+        "Llamadas de voz HD",
+        "Ubicación e historial de recorridos",
+        "Bloquea llamadas de desconocidos",
+        "Contador de pasos y modo no molestar"
+      ],
+      "fuente": "manual E-D17"
+    },
+    {
+      "modelo": "E-FA96S",
+      "categoria": "mayores",
+      "nombre": "Reloj 4G para adultos mayores",
+      "precio": 149,
+      "conexion": "sim",
+      "colores": [{"color": "Negro", "foto": "e-fa96s.png", "existencias": 1}],
+      "funciones": [
+        "Botón SOS",
+        "Llamadas de voz",
+        "Ubicación por GPS, WiFi y antenas",
+        "Zonas seguras con aviso"
+      ],
+      "fuente": "por confirmar (protocolo ASR de adultos mayores, misma familia que FA81)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "E-L16Pro",
+      "categoria": "mayores",
+      "nombre": "Banda GPS para adultos mayores",
+      "precio": 199,
+      "conexion": "sim",
+      "colores": [{"color": "Negro", "foto": "e-l16pro.png", "existencias": 1}],
+      "funciones": [
+        "Ubicación GPS con conexión 4G",
+        "Botón SOS",
+        "Formato de banda, liviano para todo el día"
+      ],
+      "fuente": "por confirmar (sin manual)",
+      "por_confirmar": true
+    },
+    {
+      "modelo": "E-L08Pro",
+      "categoria": "mayores",
+      "nombre": "Reloj 4G con salud para adultos mayores",
+      "precio": 229,
+      "conexion": "sim",
+      "app": "Ai care",
+      "colores": [{"color": "Negro", "foto": "e-l08pro.png", "existencias": 1}],
+      "funciones": [
+        "Botón SOS: llama a 3 números uno por uno y envía una alerta",
+        "Llamadas en ambos sentidos, hasta 20 contactos",
+        "Modo emergencia: envía la ubicación cada minuto",
+        "Ritmo cardiaco y temperatura corporal",
+        "Pasos y sueño",
+        "Pantalla redonda de 1.3 pulgadas y batería de 650 mAh"
+      ],
+      "nota": "Esta versión no incluye electrocardiograma (ECG).",
+      "salud": true,
+      "fuente": "manual E-L08Pro"
+    },
+    {
+      "modelo": "S-ET488",
+      "categoria": "salud",
+      "nombre": "Reloj con electrocardiograma (ECG)",
+      "precio": 149,
+      "conexion": "bluetooth",
+      "app": "H Band",
+      "colores": [{"color": "Negro", "foto": "s-et488.png", "existencias": 1}],
+      "funciones": [
+        "Electrocardiograma (ECG) desde la muñeca",
+        "Temperatura corporal",
+        "Presión arterial y oxígeno en sangre",
+        "Ritmo cardiaco y calidad del sueño",
+        "Contesta las llamadas de su celular desde el reloj",
+        "Modos de deporte y clima"
+      ],
+      "salud": true,
+      "fuente": "manual S-ET488"
+    },
+    {
+      "modelo": "S-F3",
+      "categoria": "salud",
+      "nombre": "Reloj con tensiómetro de brazalete",
+      "precio": 219,
+      "conexion": "bluetooth",
+      "app": "iCareFit",
+      "colores": [{"color": "Negro", "foto": "s-f3.png", "existencias": 1}],
+      "funciones": [
+        "Mide la presión con una bolsa de aire en la correa, como un tensiómetro",
+        "Ritmo cardiaco las 24 horas",
+        "Oxígeno en sangre (SpO2)",
+        "Sueño, pasos, distancia y calorías",
+        "Resiste salpicaduras (IP65)"
+      ],
+      "salud": true,
+      "fuente": "manual S-F3 (modelo F3, con medición de presión)"
+    },
+    {
+      "modelo": "P-FA58P",
+      "categoria": "mascotas",
+      "nombre": "Rastreador 4G para el collar de su mascota",
+      "precio": 119,
+      "conexion": "sim",
+      "app": "Aibeile Plus",
+      "colores": [{"color": "Negro", "foto": "p-fa58p.png", "existencias": 2}],
+      "funciones": [
+        "Ubicación por GPS, WiFi y antenas celulares",
+        "Historial de recorridos de los últimos tres meses",
+        "Hasta 3 zonas seguras: le avisa si su mascota sale",
+        "Reporta cada 10 minutos, o cada hora para ahorrar batería",
+        "Mensajes de voz: puede hablarle desde la app"
+      ],
+      "fuente": "manual P-FA58P"
+    }
+  ]
+}
