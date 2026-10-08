@@ -1,0 +1,230 @@
+{
+  "_nota": "Líneas de producto. Cada una genera su página (archivo). 'pdf' es el catálogo del fabricante o de MTG.",
+  "lineas": [
+    {
+      "id": "fibra",
+      "archivo": "fibra-optica.html",
+      "nombre": {
+        "es": "Fibra óptica",
+        "en": "Fiber optics"
+      },
+      "corto": {
+        "es": "Cables, ODF, splitters, fusionadoras y OTDR",
+        "en": "Cables, ODF, splitters, splicers and OTDR"
+      },
+      "desc": {
+        "es": "Todo lo que lleva una red de fibra, de la planta externa al rack: cable, conectores, distribuidores, empalme y equipos para certificarla. Lo suministramos y, si hace falta, lo instalamos y certificamos.",
+        "en": "Everything a fiber network needs, from outside plant to the rack: cable, connectors, distribution, splicing and the gear to certify it. We supply it and, when needed, install and certify it."
+      },
+      "marcas": [
+        "EXFO",
+        "N-TEST"
+      ],
+      "items": {
+        "es": [
+          "Cables monomodo y multimodo",
+          "Conectores, patch cords y pigtails",
+          "ODF y cajas terminales",
+          "Splitters PLC y atenuadores",
+          "Fusionadoras",
+          "OTDR, medidores de potencia (OPM), fuentes de luz (OLS) y VFL",
+          "Microscopios y limpieza de conectores"
+        ],
+        "en": [
+          "Singlemode and multimode cable",
+          "Connectors, patch cords and pigtails",
+          "ODF and terminal boxes",
+          "PLC splitters and attenuators",
+          "Fusion splicers",
+          "OTDR, optical power meters (OPM), light sources (OLS) and VFL",
+          "Fiber microscopes and connector cleaning"
+        ]
+      },
+      "foto": "img/equipos/axs-120.jpg",
+      "pdf": "https://drive.google.com/file/d/1QPjQ9Acu7P5cE2pNSzg5G4SVH9Ak764g/view",
+      "pdf_nombre": {
+        "es": "Catálogo de fibra óptica (PDF)",
+        "en": "Fiber optics catalog (PDF)"
+      }
+    },
+    {
+      "id": "rf",
+      "archivo": "rf-cobertura.html",
+      "nombre": {
+        "es": "RF y cobertura",
+        "en": "RF and coverage"
+      },
+      "corto": {
+        "es": "Antenas, DAS, repetidores y medición RF",
+        "en": "Antennas, DAS, repeaters and RF test"
+      },
+      "desc": {
+        "es": "Señal celular donde hoy no llega: dentro de edificios, hospitales y centros comerciales, y en sitios de operadores. Suministramos antenas, sistemas DAS y los equipos para medir potencia y espectro.",
+        "en": "Cellular signal where it doesn't reach today: inside buildings, hospitals and malls, and at operator sites. We supply antennas, DAS and the equipment to measure power and spectrum."
+      },
+      "marcas": [
+        "CRFS",
+        "Bird",
+        "PROMAX",
+        "PROSE"
+      ],
+      "items": {
+        "es": [
+          "Antenas direccionales y omnidireccionales",
+          "Cable coaxial y jumpers",
+          "Sistemas DAS pasivos y activos",
+          "Repetidores y amplificadores",
+          "Combinadores",
+          "Vatímetros y analizadores de espectro"
+        ],
+        "en": [
+          "Directional and omni antennas",
+          "Coaxial cable and jumpers",
+          "Passive and active DAS",
+          "Repeaters and amplifiers",
+          "Combiners",
+          "Wattmeters and spectrum analyzers"
+        ]
+      },
+      "foto": "img/equipos/rfeye-node.jpg",
+      "pdf": "",
+      "pdf_nombre": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "infra",
+      "archivo": "infraestructura.html",
+      "nombre": {
+        "es": "Infraestructura telecom",
+        "en": "Telecom infrastructure"
+      },
+      "corto": {
+        "es": "Torres, gabinetes y antenas PROSE",
+        "en": "Towers, cabinets and PROSE antennas"
+      },
+      "desc": {
+        "es": "Lo que sostiene un sitio de telecomunicaciones: estructuras, gabinetes, canalización y antenas. Somos distribuidores oficiales de PROSE en Panamá, incluidas sus antenas camufladas.",
+        "en": "What holds up a telecom site: structures, cabinets, cable runs and antennas. We are PROSE's official distributor in Panama, including their camouflaged antennas."
+      },
+      "marcas": [
+        "PROSE"
+      ],
+      "items": {
+        "es": [
+          "Torres autosoportadas",
+          "Estructuras y mástiles",
+          "Gabinetes para exterior",
+          "Racks de 19 pulgadas PROSE",
+          "Sistemas de canalización",
+          "Accesorios de montaje"
+        ],
+        "en": [
+          "Self-supporting towers",
+          "Structures and masts",
+          "Outdoor cabinets",
+          "PROSE 19-inch racks",
+          "Cable management systems",
+          "Mounting accessories"
+        ]
+      },
+      "foto": "img/equipos/prose-bts.jpg",
+      "pdf": "https://drive.google.com/file/d/1h2aDG8XvZlbC_u0uSnzkbX5ByJukNEjU/view",
+      "pdf_nombre": {
+        "es": "Catálogo de infraestructura (PDF)",
+        "en": "Infrastructure catalog (PDF)"
+      }
+    },
+    {
+      "id": "dc",
+      "archivo": "data-centers.html",
+      "nombre": {
+        "es": "Data centers y redes",
+        "en": "Data centers and networks"
+      },
+      "corto": {
+        "es": "KHIPU, racks, cableado y energía",
+        "en": "KHIPU, racks, cabling and power"
+      },
+      "desc": {
+        "es": "Centros de datos llave en mano con KHIPU, desde un gabinete hasta un contenedor, y la red que los conecta: racks, cableado estructurado y distribución de energía.",
+        "en": "Turnkey data centers with KHIPU, from a single cabinet to a container, plus the network around them: racks, structured cabling and power distribution."
+      },
+      "marcas": [
+        "KHIPU",
+        "PROSE"
+      ],
+      "items": {
+        "es": [
+          "KHIPU Micro Data Center",
+          "KHIPU Data Center modular",
+          "KHIPU Data Center en contenedor",
+          "Racks abiertos y gabinetes cerrados",
+          "Cableado Cat 6A y Cat 7, fibra OM4 y OM5",
+          "PDU, UPS y gestión de cables",
+          "Wi-Fi empresarial"
+        ],
+        "en": [
+          "KHIPU Micro Data Center",
+          "KHIPU modular data center",
+          "KHIPU container data center",
+          "Open racks and closed cabinets",
+          "Cat 6A and Cat 7 cabling, OM4 and OM5 fiber",
+          "PDU, UPS and cable management",
+          "Enterprise Wi-Fi"
+        ]
+      },
+      "foto": "",
+      "dibujo": "gabinete",
+      "pdf": "https://drive.google.com/file/d/1GTKGRNG5K_xxnGrjNMtSSk9qVoPnYeQX/view",
+      "pdf_nombre": {
+        "es": "Catálogo de data centers (PDF)",
+        "en": "Data center catalog (PDF)"
+      }
+    },
+    {
+      "id": "monitor",
+      "archivo": "monitoreo-redes.html",
+      "nombre": {
+        "es": "Monitoreo de redes",
+        "en": "Network monitoring"
+      },
+      "corto": {
+        "es": "Monitoreo de fibra, analizadores y certificadores",
+        "en": "Fiber monitoring, analyzers and certifiers"
+      },
+      "desc": {
+        "es": "Para saber qué pasa en la red antes de que el cliente llame: monitoreo remoto de fibra, analizadores de enlaces y certificadores de cableado.",
+        "en": "To know what is happening on the network before the customer calls: remote fiber monitoring, link analyzers and cabling certifiers."
+      },
+      "marcas": [
+        "N-TEST",
+        "GL Communications",
+        "AEM"
+      ],
+      "items": {
+        "es": [
+          "Plataformas de monitoreo de fibra",
+          "Analizadores de enlaces",
+          "Certificadores de cobre y fibra",
+          "Herramientas de diagnóstico",
+          "Control remoto de sitios"
+        ],
+        "en": [
+          "Fiber monitoring platforms",
+          "Link analyzers",
+          "Copper and fiber certifiers",
+          "Diagnostic tools",
+          "Remote site control"
+        ]
+      },
+      "foto": "img/equipos/fiberwatch-rtu.jpg",
+      "pdf": "",
+      "pdf_nombre": {
+        "es": "",
+        "en": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!--meta
+titulo: Catálogo de equipos de telecomunicaciones | Meta Technology Global || Telecom equipment catalog | Meta Technology Global
+descripcion: OTDR EXFO y N-TEST, monitoreo de espectro CRFS, vatímetros Bird, antenas PROSE, data centers KHIPU y más. Disponibles en Panamá o bajo pedido. Cotice por WhatsApp. || EXFO and N-TEST OTDRs, CRFS spectrum monitoring, Bird wattmeters, PROSE antennas, KHIPU data centers and more. In stock in Panama or made to order. Get a quote on WhatsApp.
+-->
+<!doctype html>
+<html lang="[[es-PA||en]]">
+<head>
+{{CABEZA}}
+</head>
+<body>
+{{CABECERA}}
+
+<main id="contenido">
+
+  <section class="cabeza-pagina">
+    <div class="envoltura" style="grid-template-columns:1fr">
+      <div>
+        <p class="migas"><a href="index.html">[[Inicio||Home]]</a> / [[Catálogo||Catalog]]</p>
+        <h1>[[Catálogo de equipos||Equipment catalog]]</h1>
+        <p class="portada-texto">[[Seis líneas de producto y diez marcas. Agregue a la cotización lo que necesita, compare hasta tres equipos y envíenos la lista por WhatsApp.||Six product lines and ten brands. Add what you need to your quote, compare up to three items and send us the list on WhatsApp.]]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top:44px">
+    <div class="envoltura">
+      <h2 class="oculto-visual">[[Líneas de producto||Product lines]]</h2>
+      <div class="rejilla-lineas">
+{{LINEAS_TARJETAS}}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-gris" id="equipos">
+    <div class="envoltura">
+      <div class="seccion-cabeza" style="margin-bottom:24px">
+        <div>
+          <h2 class="seccion-titulo">[[Equipos||Equipment]]</h2>
+          <p class="seccion-intro">[[Los que más nos piden. Si busca otro modelo, escríbalo en el buscador y, si no aparece, se lo conseguimos.||The ones we're asked for most. If you need another model, type it in the search box and, if it's not here, we'll source it.]]</p>
+        </div>
+      </div>
+      <div class="herramientas-catalogo">
+        <label class="buscador"><span class="oculto-visual">[[Buscar equipo, marca o modelo||Search equipment, brand or model]]</span>{{ICONO_BUSCAR}}<input type="search" placeholder="[[Buscar: OTDR, DAS, EXFO, rack…||Search: OTDR, DAS, EXFO, rack…]]" data-buscar-input></label>
+        <div class="fichas" role="group" aria-label="[[Filtrar por línea||Filter by line]]"><span class="fichas-titulo">[[Línea||Line]]</span>
+{{FILTROS_LINEA}}
+        </div>
+        <div class="fichas" role="group" aria-label="[[Filtrar por marca||Filter by brand]]"><span class="fichas-titulo">[[Marca||Brand]]</span>
+{{FILTROS_MARCA}}
+        </div>
+      </div>
+      <p class="conteo" aria-live="polite" data-conteo-catalogo>{{TOTAL_PRODUCTOS}} [[productos||products]]</p>
+      <div class="rejilla-productos" data-rejilla-catalogo>
+{{PRODUCTOS_TODOS}}
+      </div>
+      <div class="vacio" data-vacio hidden>
+        <p>[[No tenemos «<span data-vacio-q></span>» en esta lista, pero podemos conseguirlo.||“<span data-vacio-q></span>” isn't on this list, but we can source it.]]</p>
+        <a class="boton boton-wa" href="{{WA}}">{{ICONO_WA}}[[Preguntar por WhatsApp||Ask on WhatsApp]]</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="catalogos-pdf">
+    <div class="envoltura dividido dividido-arriba">
+      <div>
+        <h2 class="seccion-titulo">[[Catálogos en PDF||PDF catalogs]]</h2>
+        <p class="seccion-intro">[[Para revisar con su equipo o anexar a una solicitud de compra.||To review with your team or attach to a purchase request.]]</p>
+      </div>
+      <ul class="columnas-lista" style="columns:1">
+{{CATALOGOS_PDF}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion seccion-navy">
+    <div class="envoltura dividido">
+      <div>
+        <h2 class="seccion-titulo">[[¿Tiene una lista de materiales?||Have a bill of materials?]]</h2>
+        <p class="seccion-intro">[[Envíenosla con cantidades y el lugar del proyecto. Le respondemos con precio, disponibilidad y tiempo de entrega, y si hace falta, con la instalación.||Send it with quantities and the project location. We reply with price, availability and lead time, plus installation if needed.]]</p>
+      </div>
+      <div class="acciones" style="margin-top:0">
+        <a class="boton boton-wa" href="{{WA:[[Hola, les envío una lista de materiales para cotizar.||Hello, I'm sending a bill of materials for a quote.]]}}">{{ICONO_WA}}[[Enviar por WhatsApp||Send via WhatsApp]]</a>
+        <a class="boton boton-borde-claro" href="mailto:{{CORREO}}">[[Enviar por correo||Send by email]]</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{PIE}}
+{{FLOTANTES}}
+{{SCRIPTS}}
+</body>
+</html>

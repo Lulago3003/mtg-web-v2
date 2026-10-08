@@ -1,236 +1,227 @@
+<!--meta
+titulo: Medidor Inteligente: consumo eléctrico por circuito | Meta Technology Global || Smart Meter: per-circuit electricity monitoring | Meta Technology Global
+descripcion: Medimos hasta 16 circuitos dentro de su tablero, sin tocar el medidor de la distribuidora. Diagnóstico de USD 150 o monitoreo permanente. ENSA, EDEMET, EDECHI y Naturgy. || We measure up to 16 circuits inside your panel without touching the utility meter. USD 150 diagnosis or permanent monitoring. ENSA, EDEMET, EDECHI and Naturgy.
+-->
 <!doctype html>
-<html lang="es-PA">
+<html lang="[[es-PA||en]]">
 <head>
 {{CABEZA}}
-<title>Medidor Inteligente: consumo eléctrico por circuito | Meta Technology Global, Panamá</title>
-<meta name="description" content="Medimos hasta 16 circuitos dentro de su tablero, sin tocar el medidor de la distribuidora. Diagnóstico de USD 150 por aproximadamente un mes, o monitoreo permanente. ENSA, EDEMET, EDECHI y Naturgy.">
-<link rel="canonical" href="https://mtglobalpa.com/medidor.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Medidor Inteligente de Meta Technology Global">
-<meta property="og:description" content="Vea qué equipo se come su factura de luz. Diagnóstico de USD 150.">
-<meta property="og:url" content="https://mtglobalpa.com/medidor.html">
-<meta property="og:image" content="https://mtglobalpa.com/img/logo-mtg.png">
-<meta property="og:locale" content="es_PA">
 </head>
 <body>
 {{CABECERA}}
 
 <main id="contenido">
 
-  <section class="portada">
-    <div class="envoltura dos-columnas" style="align-items:center">
+  <section class="cabeza-pagina">
+    <div class="envoltura">
       <div>
-        <h1 class="titular">Medidor Inteligente</h1>
-        <p class="entrada">Vea desde el celular cuánto consume cada circuito de su casa o negocio, y reciba un informe que le dice qué equipo está gastando de más.</p>
+        <p class="migas"><a href="index.html">[[Inicio||Home]]</a> / [[Medidor Inteligente||Smart Meter]]</p>
+        <h1>[[Medidor Inteligente||Smart Meter]]</h1>
+        <p class="portada-texto">[[Vea desde el celular cuánto consume cada circuito de su casa o negocio, y reciba un informe que le dice qué equipo está gastando de más.||See on your phone how much each circuit in your home or business uses, and get a report that tells you which appliance is using too much.]]</p>
+        <p class="precio-chip">[[Diagnóstico||Diagnosis]] <strong>USD 150</strong></p>
         <div class="acciones">
-          <a class="boton boton-wa" href="{{WA:Hola, quiero agendar la evaluación de mi tablero para el Medidor Inteligente.}}">{{ICONO_WA}}Agendar evaluación del tablero</a>
-          <a class="boton boton-linea" href="#planes">Ver planes y precios</a>
+          <a class="boton boton-wa" href="{{WA:[[Hola, quiero agendar la evaluación de mi tablero para el Medidor Inteligente.||Hello, I'd like to book a panel assessment for the Smart Meter.]]}}">{{ICONO_WA}}[[Agendar evaluación del tablero||Book a panel assessment]]</a>
+          <a class="boton boton-borde-claro" href="#planes">[[Ver planes y precios||Plans and prices]]</a>
         </div>
       </div>
+      <div class="video-marco"><video controls preload="none" playsinline poster="{{R}}video/poster-medidor-2.jpg" aria-label="[[Video: instalación del Medidor Inteligente en una casa||Video: Smart Meter installation in a home]]"><source src="{{R}}video/medidor-2.mp4" type="video/mp4"></video></div>
+    </div>
+  </section>
 
-      <figure class="diagrama" style="margin:0">
-        <svg viewBox="0 0 400 470" role="img" aria-labelledby="diag-t">
-          <title id="diag-t">Tablero eléctrico con una pinza de medición en cada uno de sus 16 circuitos, conectadas a un sensor con Wi-Fi</title>
-          <rect x="16" y="8" width="368" height="454" rx="16" fill="#e9edf1" stroke="#a9b4bf"/>
-          <circle cx="30" cy="22" r="4" fill="#a9b4bf"/><circle cx="370" cy="22" r="4" fill="#a9b4bf"/>
-          <rect x="44" y="36" width="312" height="312" rx="8" fill="#1b2433"/>
-          <rect x="160" y="50" width="80" height="34" rx="4" fill="#303c52"/>
-          <rect x="168" y="58" width="22" height="18" rx="2" fill="#ffffff"/>
-          <text x="232" y="72" fill="#b9c3ce" font-size="11" text-anchor="end" font-family="Archivo, sans-serif">Principal</text>
-          <!-- 8 breakers por columna: impares a la izquierda, pares a la derecha -->
-          <g font-family="Archivo, sans-serif" font-size="11" fill="#b9c3ce">
-            <text x="62" y="113" text-anchor="end">1</text><text x="62" y="142" text-anchor="end">3</text><text x="62" y="171" text-anchor="end">5</text><text x="62" y="200" text-anchor="end">7</text>
-            <text x="62" y="229" text-anchor="end">9</text><text x="62" y="258" text-anchor="end">11</text><text x="62" y="287" text-anchor="end">13</text><text x="62" y="316" text-anchor="end">15</text>
-            <text x="338" y="113">2</text><text x="338" y="142">4</text><text x="338" y="171">6</text><text x="338" y="200">8</text>
-            <text x="338" y="229">10</text><text x="338" y="258">12</text><text x="338" y="287">14</text><text x="338" y="316">16</text>
-          </g>
-          <g fill="#303c52">
-            <rect x="68" y="100" width="76" height="22" rx="3"/><rect x="68" y="129" width="76" height="22" rx="3"/><rect x="68" y="158" width="76" height="22" rx="3"/><rect x="68" y="187" width="76" height="22" rx="3"/>
-            <rect x="68" y="216" width="76" height="22" rx="3"/><rect x="68" y="245" width="76" height="22" rx="3"/><rect x="68" y="274" width="76" height="22" rx="3"/><rect x="68" y="303" width="76" height="22" rx="3"/>
-            <rect x="256" y="100" width="76" height="22" rx="3"/><rect x="256" y="129" width="76" height="22" rx="3"/><rect x="256" y="158" width="76" height="22" rx="3"/><rect x="256" y="187" width="76" height="22" rx="3"/>
-            <rect x="256" y="216" width="76" height="22" rx="3"/><rect x="256" y="245" width="76" height="22" rx="3"/><rect x="256" y="274" width="76" height="22" rx="3"/><rect x="256" y="303" width="76" height="22" rx="3"/>
-          </g>
-          <g fill="#b9c3ce">
-            <rect x="74" y="105" width="20" height="12" rx="2"/><rect x="74" y="134" width="20" height="12" rx="2"/><rect x="74" y="163" width="20" height="12" rx="2"/><rect x="74" y="192" width="20" height="12" rx="2"/>
-            <rect x="74" y="221" width="20" height="12" rx="2"/><rect x="74" y="250" width="20" height="12" rx="2"/><rect x="74" y="279" width="20" height="12" rx="2"/><rect x="74" y="308" width="20" height="12" rx="2"/>
-            <rect x="306" y="105" width="20" height="12" rx="2"/><rect x="306" y="134" width="20" height="12" rx="2"/><rect x="306" y="163" width="20" height="12" rx="2"/><rect x="306" y="192" width="20" height="12" rx="2"/>
-            <rect x="306" y="221" width="20" height="12" rx="2"/><rect x="306" y="250" width="20" height="12" rx="2"/><rect x="306" y="279" width="20" height="12" rx="2"/><rect x="306" y="308" width="20" height="12" rx="2"/>
-          </g>
-          <!-- cables de cada circuito hacia el canal central, con su pinza -->
-          <g stroke="#7d8a99" stroke-width="2" fill="none">
-            <path d="M144 111 H186 V352"/><path d="M144 140 H189"/><path d="M144 169 H189"/><path d="M144 198 H189"/>
-            <path d="M144 227 H189"/><path d="M144 256 H189"/><path d="M144 285 H189"/><path d="M144 314 H189"/>
-            <path d="M256 111 H214 V352"/><path d="M256 140 H211"/><path d="M256 169 H211"/><path d="M256 198 H211"/>
-            <path d="M256 227 H211"/><path d="M256 256 H211"/><path d="M256 285 H211"/><path d="M256 314 H211"/>
-            <path d="M200 84 V352" stroke-width="5" stroke="#4a5568"/>
-          </g>
-          <g fill="#1b2433" stroke="#e8731a" stroke-width="3.5">
-            <circle cx="164" cy="111" r="6"/><circle cx="164" cy="140" r="6"/><circle cx="164" cy="169" r="6"/><circle cx="164" cy="198" r="6"/>
-            <circle cx="164" cy="227" r="6"/><circle cx="164" cy="256" r="6"/><circle cx="164" cy="285" r="6"/><circle cx="164" cy="314" r="6"/>
-            <circle cx="236" cy="111" r="6"/><circle cx="236" cy="140" r="6"/><circle cx="236" cy="169" r="6"/><circle cx="236" cy="198" r="6"/>
-            <circle cx="236" cy="227" r="6"/><circle cx="236" cy="256" r="6"/><circle cx="236" cy="285" r="6"/><circle cx="236" cy="314" r="6"/>
-          </g>
-          <rect x="132" y="372" width="136" height="60" rx="8" fill="#ffffff" stroke="#1b2433" stroke-width="2"/>
-          <text x="200" y="398" text-anchor="middle" font-family="Archivo, sans-serif" font-size="14" font-weight="700" fill="#1b2433">Sensor</text>
-          <text x="200" y="417" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" fill="#4a5568">16 circuitos + principal</text>
-          <g stroke="#2563c9" stroke-width="2.5" fill="none" stroke-linecap="round">
-            <path d="M286 396 a12 12 0 0 1 0 16"/><path d="M294 388 a22 22 0 0 1 0 32"/><path d="M302 380 a32 32 0 0 1 0 48"/>
-          </g>
-          <text x="318" y="409" font-family="Archivo, sans-serif" font-size="11" fill="#2563c9">Wi-Fi</text>
-        </svg>
-        <figcaption style="color:var(--tinta-2);font-size:.95rem;margin-top:10px;text-align:center">Una pinza en cada circuito, dentro del tablero. El medidor de la distribuidora no se toca.</figcaption>
+  <section class="seccion">
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <div>
+          <h2 class="seccion-titulo">[[Así se ve una instalación||What an installation looks like]]</h2>
+          <p class="seccion-intro">[[Una pinza en cada circuito, dentro del tablero, y un sensor que envía los datos por Wi-Fi. El medidor de la distribuidora no se toca.||A clamp on each circuit inside the panel, and a sensor that sends the data over Wi-Fi. The utility meter is not touched.]]</p>
+        </div>
+      </div>
+      <div class="fotos-reales">
+        <figure><img src="{{R}}img/fotos/tablero-con-pinzas.jpg" alt="[[Tablero con las pinzas del medidor instaladas||Panel with the meter clamps installed]]" loading="lazy"><figcaption>[[Pinzas instaladas en cada circuito||Clamps installed on each circuit]]</figcaption></figure>
+        <figure><img src="{{R}}img/fotos/tecnico-en-tablero.jpg" alt="[[Técnico de MTG instalando el sensor||MTG technician installing the sensor]]" loading="lazy"><figcaption>[[Instalación: de dos a tres horas||Installation: two to three hours]]</figcaption></figure>
+        <figure><img src="{{R}}img/fotos/ingeniero-con-informe.jpg" alt="[[Ingeniero de MTG configurando la plataforma||MTG engineer setting up the platform]]" loading="lazy"><figcaption>[[Configuración y revisión con usted||Setup and review with you]]</figcaption></figure>
+        <figure><img src="{{R}}img/fotos/equipo-en-camino.jpg" alt="[[Técnicos de MTG camino a una instalación||MTG technicians on their way to an installation]]" loading="lazy"><figcaption>[[Vamos a su casa o negocio||We come to your home or business]]</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-gris">
+    <div class="envoltura">
+      <h2 class="seccion-titulo">[[Un informe que le dice qué equipo falla||A report that tells you which appliance is failing]]</h2>
+      <p class="seccion-intro" style="margin-bottom:30px">[[Cada equipo deja una huella en el consumo: cuánta potencia usa, cuántas veces arranca al día y a qué horas. Con esa huella pasamos de sumar kilovatios a señalar el equipo.||Every appliance leaves a footprint in the data: how much power it draws, how many times it starts a day and at what hours. With that footprint we go from adding up kilowatts to pointing at the appliance.]]</p>
+      <div class="comparacion">
+        <figure class="comun"><figcaption>[[Un informe común dice||A typical report says]]</figcaption><blockquote>[[«El circuito 3 consumió 90 kWh.»||“Circuit 3 used 90 kWh.”]]</blockquote></figure>
+        <figure class="mtg"><figcaption>[[El nuestro dice||Ours says]]</figcaption><blockquote>[[«La nevera arranca 38 veces al día cuando lo normal son 15. Hay que revisar el sello o el condensador.»||“The fridge starts 38 times a day when 15 is normal. Check the door seal or the condenser.”]]</blockquote></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="envoltura dividido">
+      <div>
+        <h2 class="seccion-titulo">[[Un caso real: una clínica||A real case: a clinic]]</h2>
+        <p class="seccion-intro">[[La climatización se llevó casi tres cuartas partes de la energía, y la mayor parte se gastó en horario de consulta. La recomendación fue revisar la programación, la temperatura y el mantenimiento del aire en esa franja antes de cambiar equipos.||Air conditioning took almost three quarters of the energy, mostly during office hours. The recommendation was to review A/C scheduling, temperature and maintenance in that window before replacing equipment.]]</p>
+        <p class="texto-2" style="margin-top:14px">[[Este caso muestra el método. No garantiza que otro negocio tenga el mismo reparto ni el mismo ahorro.||This case shows the method. It doesn't guarantee another business will have the same breakdown or savings.]]</p>
+      </div>
+      <figure class="medicion" style="margin:0">
+        <p class="medicion-titulo">[[Clínica comercial||Commercial clinic]]</p>
+        <p class="medicion-sub">[[681.9 kWh medidos en 34.6 días||681.9 kWh measured over 34.6 days]]</p>
+        <div class="barra-uso" role="img" aria-label="[[Climatización 73.75 por ciento, todo lo demás 26.25 por ciento||Air conditioning 73.75 percent, everything else 26.25 percent]]"><span class="clima" style="width:73.75%"></span><span class="resto" style="width:26.25%"></span></div>
+        <dl class="leyenda">
+          <dt><span class="cuadro clima"></span>[[Climatización, 502.9 kWh||Air conditioning, 502.9 kWh]]</dt><dd>73.75 %</dd>
+          <dt><span class="cuadro resto"></span>[[Todo lo demás||Everything else]]</dt><dd>26.25 %</dd>
+        </dl>
+        <figcaption class="medicion-pie">[[El 72.55 % de la energía se gastó entre las 9:00 a.m. y las 4:00 p.m.||72.55% of the energy was used between 9:00 a.m. and 4:00 p.m.]]</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="seccion seccion-acero">
+  <section class="seccion seccion-gris" id="planes">
     <div class="envoltura">
-      <h2 class="titulo">Un informe que le dice qué equipo falla</h2>
-      <p class="entrada">Cada equipo deja una huella en el consumo: cuánta potencia usa, cuántas veces arranca al día y a qué horas. Con esa huella pasamos de sumar kilovatios a señalar el equipo.</p>
-      <div class="comparacion">
-        <figure class="comun">
-          <figcaption>Un informe común dice</figcaption>
-          <blockquote>«El circuito 3 consumió 90 kWh.»</blockquote>
-        </figure>
-        <figure class="mtg">
-          <figcaption>El nuestro dice</figcaption>
-          <blockquote>«La nevera arranca 38 veces al día cuando lo normal son 15. Hay que revisar el sello o el condensador.»</blockquote>
-        </figure>
+      <div class="seccion-cabeza">
+        <div>
+          <h2 class="seccion-titulo">[[Planes y precios||Plans and prices]]</h2>
+          <p class="seccion-intro">[[Si quiere saber por qué subió la factura, empiece por el diagnóstico. Si quiere control todo el tiempo o su consumo es alto, le conviene el monitoreo permanente.||If you want to know why your bill went up, start with the diagnosis. If you want control all the time or your usage is high, permanent monitoring is the better fit.]]</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="seccion" id="planes">
-    <div class="envoltura">
-      <h2 class="titulo">Planes y precios</h2>
-      <p class="entrada">Si quiere saber por qué subió la factura, empiece por el diagnóstico. Si quiere control todo el tiempo o su consumo es alto, le conviene el monitoreo permanente.</p>
       <div class="planes">
         <article class="plan">
-          <h3>Diagnóstico de consumo energético</h3>
-          <p class="plan-precio"><small>USD</small> 150</p>
-          <p class="plan-antes">Pago único</p>
-          <p>Instalamos el sensor por aproximadamente un mes, analizamos cada circuito, revisamos los hallazgos con usted y le entregamos un informe con recomendaciones.</p>
-          <p class="plan-para">Para quien quiere saber por qué subió la factura.</p>
+          <h3>[[Diagnóstico de consumo energético||Energy usage diagnosis]]</h3>
+          <p class="plan-precio"><small>USD</small>150</p>
+          <p class="plan-antes">[[Pago único||One-time payment]]</p>
+          <p>[[Instalamos el sensor por aproximadamente un mes, analizamos cada circuito, revisamos los hallazgos con usted y le entregamos un informe con recomendaciones.||We install the sensor for about a month, analyze each circuit, review the findings with you and deliver a report with recommendations.]]</p>
+          <p class="plan-para">[[Para quien quiere saber por qué subió la factura.||For anyone who wants to know why the bill went up.]]</p>
         </article>
         <article class="plan plan-destacado">
-          <span class="etiqueta-promo">En promoción</span>
-          <h3>Monitoreo inteligente permanente</h3>
-          <p class="plan-precio"><small>USD</small> 350</p>
-          <p class="plan-antes">Precio regular <s>USD 425</s></p>
-          <p>El equipo queda instalado en su tablero: equipo MTG, instalación profesional, configuración y acceso permanente a la app.</p>
-          <p class="plan-para">Para quien quiere control continuo o tiene un consumo alto.</p>
+          <span class="etiqueta-promo">[[En promoción||On promotion]]</span>
+          <h3>[[Monitoreo inteligente permanente||Permanent smart monitoring]]</h3>
+          <p class="plan-precio"><small>USD</small>350</p>
+          <p class="plan-antes">[[Precio regular <s>USD 425</s>||Regular price <s>USD 425</s>]]</p>
+          <p>[[El equipo queda instalado en su tablero: equipo MTG, instalación profesional, configuración y acceso permanente a la app.||The equipment stays in your panel: MTG hardware, professional installation, setup and permanent app access.]]</p>
+          <p class="plan-para">[[Para quien quiere control continuo o tiene un consumo alto.||For continuous control or high usage.]]</p>
         </article>
         <article class="plan">
-          <h3>Seguimiento mensual</h3>
-          <p class="plan-precio"><small>USD</small> 11.99</p>
-          <p class="plan-antes">Al mes, opcional</p>
-          <p>Cada mes le enviamos el análisis de su consumo, el escalón de tarifa en que está cayendo y recomendaciones, con acompañamiento.</p>
-          <p class="plan-para">Con el equipo permanente puede usar la app del fabricante sin pagar mensualidad.</p>
+          <h3>[[Seguimiento mensual||Monthly follow-up]]</h3>
+          <p class="plan-precio"><small>USD</small>11.99</p>
+          <p class="plan-antes">[[Al mes, opcional||Per month, optional]]</p>
+          <p>[[Cada mes le enviamos el análisis de su consumo, el escalón de tarifa en que está cayendo y recomendaciones, con acompañamiento.||Every month we send you the analysis of your usage, the tariff tier you're falling into and recommendations, with support.]]</p>
+          <p class="plan-para">[[Con el equipo permanente puede usar la app del fabricante sin pagar mensualidad.||With permanent equipment you can use the manufacturer's app with no monthly fee.]]</p>
         </article>
       </div>
-      <div class="acciones">
-        <a class="boton boton-wa" href="{{WA:Hola, quiero cotizar el Medidor Inteligente. Mi propiedad es:}}">{{ICONO_WA}}Cotizar por WhatsApp</a>
-      </div>
+      <div class="acciones"><a class="boton boton-wa" href="{{WA:[[Hola, quiero cotizar el Medidor Inteligente. Mi propiedad es:||Hello, I'd like a quote for the Smart Meter. My property is:]]}}">{{ICONO_WA}}[[Cotizar por WhatsApp||Get a quote on WhatsApp]]</a></div>
     </div>
   </section>
 
-  <section class="seccion seccion-acero">
+  <section class="seccion seccion-navy">
     <div class="envoltura">
-      <h2 class="titulo">Cómo se instala</h2>
+      <h2 class="seccion-titulo" style="margin-bottom:34px">[[Cómo se instala||How it's installed]]</h2>
       <ol class="pasos">
-        <li><strong>Evaluación del tablero</strong><p>Coordinamos una revisión breve: acceso al tablero, Wi-Fi cerca y si hay paneles solares.</p></li>
-        <li><strong>Instalación</strong><p>Toma de dos a tres horas, sin cortes largos de luz. Ponemos una pinza en cada circuito.</p></li>
-        <li><strong>Consumo en vivo</strong><p>Le enviamos un enlace al portal: consumo del momento, historial, reparto por circuito y horas pico.</p></li>
-        <li><strong>Informe</strong><p>Con los datos y sus facturas preparamos los hallazgos y las recomendaciones, firmados por ingeniero.</p></li>
+        <li><strong>[[Evaluación del tablero||Panel assessment]]</strong><p>[[Coordinamos una revisión breve: acceso al tablero, Wi-Fi cerca y si hay paneles solares.||We arrange a short check: panel access, nearby Wi-Fi and whether there are solar panels.]]</p></li>
+        <li><strong>[[Instalación||Installation]]</strong><p>[[De dos a tres horas, sin cortes largos de luz. Ponemos una pinza en cada circuito.||Two to three hours, with no long power cuts. We put a clamp on each circuit.]]</p></li>
+        <li><strong>[[Consumo en vivo||Live usage]]</strong><p>[[Le enviamos un enlace al portal: consumo del momento, historial, reparto por circuito y horas pico.||We send you a link to the portal: current usage, history, breakdown by circuit and peak hours.]]</p></li>
+        <li><strong>[[Informe||Report]]</strong><p>[[Con los datos y sus facturas preparamos los hallazgos y las recomendaciones, firmados por ingeniero.||With the data and your bills we prepare the findings and recommendations, signed by an engineer.]]</p></li>
       </ol>
     </div>
   </section>
 
   <section class="seccion">
-    <div class="envoltura dos-columnas">
-      <div>
-        <h2 class="titulo">Cada kWh que ahorra vale más de lo que parece</h2>
-        <div class="texto">
-          <p class="entrada">La tarifa residencial se cobra por escalones. El kWh que usted deja de consumir sale del escalón más caro que está pagando, no del promedio.</p>
-          <p style="margin-top:18px">En ENSA el precio del escalón se aplica a todo el consumo del mes: al pasar de 300 a 301 kWh, o de 750 a 751, todos los kWh suben de precio. Por eso el informe le dice en qué escalón está cayendo.</p>
-          <p>Leemos facturas de ENSA, EDEMET, EDECHI y Naturgy, también escaneadas.</p>
+    <div class="envoltura">
+      <div class="seccion-cabeza">
+        <div>
+          <h2 class="seccion-titulo">[[Los equipos que instalamos||The equipment we install]]</h2>
+          <p class="seccion-intro">[[Trabajamos con equipos de Emporia Energy y los dejamos configurados con nuestra plataforma.||We work with Emporia Energy hardware and leave it set up with our platform.]]</p>
         </div>
       </div>
-      <div class="medicion">
-        <p class="medicion-titulo">Una factura real de EDEMET</p>
-        <p class="medicion-sub">Tarifa residencial, factura de un cliente</p>
-        <table class="tabla-tarifa">
-          <tbody>
-            <tr><td>Consumo del mes</td><td>388 kWh</td></tr>
-            <tr><td>Precio promedio de la factura</td><td>B/. 0.1684 por kWh</td></tr>
-            <tr><td>Lo que valía cada kWh recortado</td><td>B/. 0.22549 por kWh</td></tr>
-          </tbody>
-        </table>
-        <p class="medicion-pie">Cada kWh ahorrado valía un 34 % más que el promedio de la factura.</p>
+      <div class="equipos">
+        <article class="equipo">
+          <div class="equipo-foto"><img src="{{R}}img/equipos/emporia-vue3.jpg" alt="[[Sensor Emporia Vue 3 con sus pinzas||Emporia Vue 3 sensor with its clamps]]" loading="lazy" data-respaldo="Emporia Vue 3"></div>
+          <div class="equipo-cuerpo"><h3>[[Sensor Vue 3||Vue 3 sensor]]</h3><p>[[Va dentro del tablero y mide hasta 16 circuitos más la acometida principal. Si tiene paneles solares, también muestra lo que produce y lo que envía a la red.||Goes inside the panel and measures up to 16 circuits plus the main feed. With solar panels, it also shows what you produce and send to the grid.]]</p></div>
+        </article>
+        <article class="equipo">
+          <div class="equipo-foto"><img src="{{R}}img/equipos/emporia-enchufe.jpg" alt="[[Enchufe inteligente Emporia||Emporia smart plug]]" loading="lazy" data-respaldo="Emporia Smart Plug"></div>
+          <div class="equipo-cuerpo"><h3>[[Enchufe inteligente||Smart plug]]</h3><p>[[Mide un solo aparato, como una nevera vieja o un calentador, y le dice cuánto consume. Se apaga desde el celular o con un horario.||Measures a single appliance, like an old fridge or a water heater, and tells you how much it uses. Turn it off from your phone or on a schedule.]]</p></div>
+        </article>
+        <article class="equipo">
+          <div class="equipo-foto">{{DIBUJO_CARGADOR}}</div>
+          <div class="equipo-cuerpo"><h3>[[Cargador para carro eléctrico||EV charger]]</h3><p>[[Cargador de nivel 2 de hasta 48 amperios en instalación fija. Le muestra cuánta energía usó cada carga y se controla desde la app.||Level 2 charger up to 48 amps when hardwired. It shows the energy used by each charge and is controlled from the app.]]</p></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="seccion seccion-acero">
-    <div class="envoltura dos-columnas">
+  <section class="seccion seccion-gris">
+    <div class="envoltura dividido">
       <div>
-        <h2 class="titulo">Lo que necesita</h2>
-        <ul class="lista-simple">
-          <li>Acceso autorizado al tablero eléctrico.</li>
-          <li>Señal Wi-Fi de 2.4 GHz cerca del tablero.</li>
-          <li>Autorización del dueño o de la administración del edificio.</li>
-          <li>Avisarnos si tiene paneles solares u otra instalación especial.</li>
-        </ul>
+        <h2 class="seccion-titulo">[[Cada kWh que ahorra vale más de lo que parece||Each kWh you save is worth more than it looks]]</h2>
+        <p class="seccion-intro">[[La tarifa residencial se cobra por escalones. El kWh que usted deja de consumir sale del escalón más caro que está pagando, no del promedio.||Residential tariffs are charged in tiers. The kWh you stop using comes off the most expensive tier you're paying, not the average.]]</p>
+        <p class="texto-2" style="margin-top:14px">[[En ENSA el precio del escalón se aplica a todo el consumo del mes: al pasar de 300 a 301 kWh, o de 750 a 751, todos los kWh suben de precio. Por eso el informe le dice en qué escalón está cayendo.||With ENSA the tier price applies to the whole month's usage: going from 300 to 301 kWh, or 750 to 751, raises the price of every kWh. That's why the report tells you which tier you're falling into.]]</p>
       </div>
-      <div>
-        <h2 class="titulo">Lo que el medidor no hace</h2>
-        <ul class="lista-simple">
-          <li>No baja la factura por sí solo: le muestra dónde actuar.</li>
-          <li>No separa dos equipos que comparten un mismo circuito.</li>
-          <li>No confirma por sí solo una falla eléctrica ni un cobro incorrecto de la distribuidora.</li>
-          <li>No toca el medidor de la distribuidora ni su facturación.</li>
-        </ul>
+      <div class="medicion">
+        <p class="medicion-titulo">[[Una factura real de EDEMET||A real EDEMET bill]]</p>
+        <p class="medicion-sub">[[Tarifa residencial, factura de un cliente||Residential tariff, a customer's bill]]</p>
+        <table class="tabla-tarifa"><tbody>
+          <tr><td>[[Consumo del mes||Monthly usage]]</td><td>388 kWh</td></tr>
+          <tr><td>[[Precio promedio de la factura||Average price on the bill]]</td><td>B/. 0.1684 [[por kWh||per kWh]]</td></tr>
+          <tr><td>[[Lo que valía cada kWh recortado||What each kWh cut was worth]]</td><td>B/. 0.22549 [[por kWh||per kWh]]</td></tr>
+        </tbody></table>
+        <p class="medicion-pie">[[Cada kWh ahorrado valía un 34 % más que el promedio de la factura.||Each kWh saved was worth 34% more than the bill's average.]]</p>
       </div>
     </div>
   </section>
 
   <section class="seccion">
-    <div class="envoltura">
-      <h2 class="titulo">Preguntas frecuentes</h2>
-      <div class="preguntas">
-        <details>
-          <summary>¿Cuánto voy a ahorrar?</summary>
-          <p>Depende de qué equipos consumen en su propiedad, y eso es justamente lo que se mide. No prometemos porcentajes: le entregamos los hallazgos y lo que vale cada recorte según su tarifa.</p>
-        </details>
-        <details>
-          <summary>¿Tocan el medidor de la luz?</summary>
-          <p>No. El sensor va dentro de su tablero interno. El medidor de la distribuidora y su facturación quedan igual.</p>
-        </details>
-        <details>
-          <summary>¿Sirve para apartamentos?</summary>
-          <p>Sí. Se mide el tablero interno del apartamento, no el de las áreas comunes del edificio.</p>
-        </details>
-        <details>
-          <summary>¿Y si mi tablero tiene más de 16 circuitos?</summary>
-          <p>Se instala un segundo sensor. Escríbanos con una foto del tablero y le decimos cuántos hacen falta.</p>
-        </details>
-        <details>
-          <summary>¿Qué pasa al terminar el diagnóstico?</summary>
-          <p>Revisamos los hallazgos con usted y retiramos el equipo, salvo que decida pasar al monitoreo permanente.</p>
-        </details>
+    <div class="envoltura dividido dividido-arriba">
+      <div>
+        <h2 class="seccion-titulo">[[Lo que necesita||What you need]]</h2>
+        <ul class="lista-check">
+          <li>[[Acceso autorizado al tablero eléctrico.||Authorized access to the electrical panel.]]</li>
+          <li>[[Señal Wi-Fi de 2.4 GHz cerca del tablero.||2.4 GHz Wi-Fi near the panel.]]</li>
+          <li>[[Autorización del dueño o de la administración del edificio.||Permission from the owner or building management.]]</li>
+          <li>[[Avisarnos si tiene paneles solares u otra instalación especial.||Let us know about solar panels or other special setups.]]</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="seccion-titulo">[[Lo que el medidor no hace||What the meter doesn't do]]</h2>
+        <ul class="lista-check lista-limite">
+          <li>[[No baja la factura por sí solo: le muestra dónde actuar.||It doesn't lower the bill by itself: it shows you where to act.]]</li>
+          <li>[[No separa dos equipos que comparten un mismo circuito.||It can't separate two appliances on the same circuit.]]</li>
+          <li>[[No confirma por sí solo una falla eléctrica ni un cobro incorrecto de la distribuidora.||It doesn't by itself confirm an electrical fault or a utility billing error.]]</li>
+          <li>[[No toca el medidor de la distribuidora ni su facturación.||It doesn't touch the utility meter or its billing.]]</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="seccion seccion-tinta">
-    <div class="envoltura">
-      <p class="contacto-grande">Agende la evaluación de su tablero al <a href="{{WA:Hola, quiero agendar la evaluación de mi tablero para el Medidor Inteligente.}}">6887-3065</a>.</p>
-      <p class="entrada">Cuéntenos si es casa, apartamento o negocio, y cuánto paga de luz al mes.</p>
+  <section class="seccion seccion-gris">
+    <div class="envoltura dividido dividido-arriba">
+      <h2 class="seccion-titulo">[[Preguntas frecuentes||Frequently asked questions]]</h2>
+      <div class="preguntas">
+        <details><summary>[[¿Cuánto voy a ahorrar?||How much will I save?]]</summary><p>[[Depende de qué equipos consumen en su propiedad, y eso es justamente lo que se mide. No prometemos porcentajes: le entregamos los hallazgos y lo que vale cada recorte según su tarifa.||It depends on which appliances use energy in your property, which is exactly what we measure. We don't promise percentages: we give you the findings and what each cut is worth on your tariff.]]</p></details>
+        <details><summary>[[¿Tocan el medidor de la luz?||Do you touch the utility meter?]]</summary><p>[[No. El sensor va dentro de su tablero interno. El medidor de la distribuidora y su facturación quedan igual.||No. The sensor goes inside your internal panel. The utility meter and its billing stay as they are.]]</p></details>
+        <details><summary>[[¿Cuándo veo los primeros datos?||When do I see the first data?]]</summary><p>[[El mismo día de la instalación ya ve el consumo en vivo. Con una o dos semanas de datos se notan los patrones de cada equipo, y el informe del diagnóstico se entrega al cierre del mes.||You see live usage the same day it's installed. With one or two weeks of data each appliance's pattern shows up, and the diagnosis report is delivered at the end of the month.]]</p></details>
+        <details><summary>[[¿Sirve para apartamentos?||Does it work in apartments?]]</summary><p>[[Sí. Se mide el tablero interno del apartamento, no el de las áreas comunes del edificio.||Yes. We measure the apartment's internal panel, not the building's common areas.]]</p></details>
+        <details><summary>[[¿Y si mi tablero tiene más de 16 circuitos?||What if my panel has more than 16 circuits?]]</summary><p>[[Se instala un segundo sensor. Envíenos una foto del tablero y le decimos cuántos hacen falta.||We install a second sensor. Send us a photo of the panel and we'll tell you how many are needed.]]</p></details>
+        <details><summary>[[¿Qué pasa al terminar el diagnóstico?||What happens when the diagnosis ends?]]</summary><p>[[Revisamos los hallazgos con usted y retiramos el equipo, salvo que decida pasar al monitoreo permanente.||We review the findings with you and remove the equipment, unless you decide to move to permanent monitoring.]]</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-navy">
+    <div class="envoltura dividido">
+      <div>
+        <h2 class="seccion-titulo">[[Agende la evaluación de su tablero||Book your panel assessment]]</h2>
+        <p class="seccion-intro">[[Cuéntenos si es casa, apartamento o negocio, y cuánto paga de luz al mes.||Tell us whether it's a house, apartment or business, and how much you pay for electricity each month.]]</p>
+      </div>
+      <div class="acciones" style="margin-top:0">
+        <a class="boton boton-wa" href="{{WA:[[Hola, quiero agendar la evaluación de mi tablero para el Medidor Inteligente.||Hello, I'd like to book a panel assessment for the Smart Meter.]]}}">{{ICONO_WA}}WhatsApp {{WA_VISIBLE}}</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 {{PIE}}
+{{FLOTANTES}}
+{{SCRIPTS}}
 </body>
 </html>

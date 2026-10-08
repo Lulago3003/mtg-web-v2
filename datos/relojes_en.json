@@ -1,0 +1,60 @@
+{
+  "_nota": "Textos en inglés de los relojes. Precios y existencias se toman de relojes.json.",
+  "categorias": {"ninos": "Kids", "mayores": "Older adults", "salud": "Health", "mascotas": "Pets"},
+  "colores": {"Negro": "Black", "Rosado": "Pink", "Azul": "Blue", "Blanco": "White"},
+  "modelos": {
+    "K-FA103": {
+      "nombre": "4G kids watch with video calling",
+      "funciones": ["Location on a map on your phone", "Video and voice calls with contacts you approve", "SOS button: hold it to call your emergency number", "Voice messages between the watch and the app", "Blocks calls from unknown numbers", "Route history and remote shutdown"]
+    },
+    "K-FA92": {
+      "nombre": "4G GPS kids watch",
+      "funciones": ["Location by GPS, WiFi and cell towers", "SOS button", "Calls with contacts you approve", "Voice messages with the app", "Safe zones: alerts you if they leave home or school", "Class mode: silences the watch during school hours"]
+    },
+    "K-H05G": {
+      "nombre": "4G GPS kids watch",
+      "funciones": ["GPS location on your phone", "SOS button", "Calls with contacts you approve", "Text and voice messages with the app"]
+    },
+    "K-H11C": {
+      "nombre": "4G kids watch",
+      "funciones": ["4G connection with its own SIM", "Location from the app", "Calls with contacts you approve", "SOS button"]
+    },
+    "E-V28C": {
+      "nombre": "Pocket 4G tracker with SOS button",
+      "funciones": ["Large SOS button on the front", "GPS location over 4G", "Pocket size: fits in a bag, purse or backpack"]
+    },
+    "E-FA81": {
+      "nombre": "Slim tracker with SOS button",
+      "funciones": ["SOS button: calls up to 3 numbers and alerts by app and SMS", "Fall detection", "Location by GPS, WiFi and towers, indoors too", "Up to 3 safe zones with alerts", "Voice calls", "Route history"]
+    },
+    "E-D17": {
+      "nombre": "Safety watch for older adults",
+      "funciones": ["SOS button: calls family when held for 3 seconds", "Auto-answers calls from the numbers you choose", "HD voice calls", "Location and route history", "Blocks calls from strangers", "Step counter and do-not-disturb mode"]
+    },
+    "E-FA96S": {
+      "nombre": "4G watch for older adults",
+      "funciones": ["SOS button", "Voice calls", "Location by GPS, WiFi and towers", "Safe zones with alerts"]
+    },
+    "E-L16Pro": {
+      "nombre": "GPS band for older adults",
+      "funciones": ["GPS location over 4G", "SOS button", "Band format, light enough for all day"]
+    },
+    "E-L08Pro": {
+      "nombre": "4G health watch for older adults",
+      "funciones": ["Red SOS button: calls 3 numbers in turn and sends an alert", "Two-way calls, up to 20 contacts", "Emergency mode: sends location every minute", "Heart rate and body temperature", "Steps and sleep", "1.3-inch round screen and 650 mAh battery"],
+      "nota": "This version does not include ECG."
+    },
+    "S-ET488": {
+      "nombre": "Watch with electrocardiogram (ECG)",
+      "funciones": ["Electrocardiogram (ECG) from the wrist", "Body temperature", "Blood pressure and blood oxygen", "Heart rate and sleep quality", "Answers your phone's calls from the watch", "Sport modes and weather"]
+    },
+    "S-F3": {
+      "nombre": "Watch with cuff blood-pressure monitor",
+      "funciones": ["Measures blood pressure with an air bladder in the strap, like a cuff monitor", "24-hour heart rate", "Blood oxygen (SpO2)", "Sleep, steps, distance and calories", "Splash resistant (IP65)"]
+    },
+    "P-FA58P": {
+      "nombre": "4G tracker for your pet's collar",
+      "funciones": ["Location by GPS, WiFi and cell towers", "Route history for the last three months", "Up to 3 safe zones: alerts you if your pet leaves", "Reports every 10 minutes, or hourly to save battery", "Voice messages: talk to your pet from the app"]
+    }
+  }
+}

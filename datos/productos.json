@@ -1,0 +1,384 @@
+{
+  "_nota": "Equipos del catálogo. 'disp': stock = disponible en Panamá, pedido = bajo pedido. 'img' apunta a la foto oficial del fabricante; si está vacío se dibuja una ilustración. Después de editar: python3 herramientas/generar.py",
+  "productos": [
+    {
+      "id": "axs-120",
+      "linea": "fibra",
+      "marca": "EXFO",
+      "oficial": true,
+      "nombre": "AXS-120",
+      "popular": true,
+      "disp": "stock",
+      "img": "img/equipos/axs-120.jpg",
+      "desc": {
+        "es": "OTDR compacto para FTTH y última milla",
+        "en": "Compact OTDR for FTTH and last mile"
+      },
+      "specs": {
+        "es": [
+          "OTDR monomodo",
+          "1310 y 1550 nm"
+        ],
+        "en": [
+          "Singlemode OTDR",
+          "1310 and 1550 nm"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "maxtester-715d",
+      "linea": "fibra",
+      "marca": "EXFO",
+      "oficial": true,
+      "nombre": "MaxTester 715D",
+      "popular": true,
+      "disp": "stock",
+      "img": "img/equipos/maxtester-715d.jpg",
+      "desc": {
+        "es": "OTDR para redes de acceso y último kilómetro",
+        "en": "OTDR for access networks and last mile"
+      },
+      "specs": {
+        "es": [
+          "OTDR monomodo",
+          "1310 y 1550 nm"
+        ],
+        "en": [
+          "Singlemode OTDR",
+          "1310 and 1550 nm"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "maxtester-730d",
+      "linea": "fibra",
+      "marca": "EXFO",
+      "oficial": true,
+      "nombre": "MaxTester 730D",
+      "disp": "pedido",
+      "img": "img/equipos/maxtester-715d.jpg",
+      "desc": {
+        "es": "OTDR multimodo y monomodo para redes LAN",
+        "en": "Multimode and singlemode OTDR for LAN"
+      },
+      "specs": {
+        "es": [
+          "850 y 1300 nm multimodo",
+          "1310 y 1550 nm monomodo"
+        ],
+        "en": [
+          "850 and 1300 nm multimode",
+          "1310 and 1550 nm singlemode"
+        ]
+      }
+    },
+    {
+      "id": "fiberwatch-rtu",
+      "linea": "fibra",
+      "marca": "N-TEST",
+      "oficial": true,
+      "nombre": "FiberWatch RTU",
+      "popular": true,
+      "disp": "stock",
+      "img": "img/equipos/fiberwatch-rtu.jpg",
+      "desc": {
+        "es": "Monitoreo remoto de rutas de fibra",
+        "en": "Remote monitoring of fiber routes"
+      },
+      "specs": {
+        "es": [
+          "Monitoreo las 24 horas",
+          "Alarmas en tiempo real"
+        ],
+        "en": [
+          "24-hour monitoring",
+          "Real-time alarms"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "rfeye-node",
+      "linea": "rf",
+      "marca": "CRFS",
+      "nombre": "RFeye Node 100-8",
+      "popular": true,
+      "disp": "pedido",
+      "img": "img/equipos/rfeye-node.jpg",
+      "desc": {
+        "es": "Monitoreo continuo del espectro radioeléctrico",
+        "en": "Continuous radio spectrum monitoring"
+      },
+      "specs": {
+        "es": [
+          "De 9 kHz a 8 GHz",
+          "Monitoreo continuo"
+        ],
+        "en": [
+          "9 kHz to 8 GHz",
+          "Continuous monitoring"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "bird-43",
+      "linea": "rf",
+      "marca": "Bird",
+      "nombre": "Vatímetro modelo 43",
+      "popular": true,
+      "disp": "stock",
+      "img": "img/equipos/bird-43.jpg",
+      "desc": {
+        "es": "Medidor de potencia RF direccional",
+        "en": "Directional RF power meter"
+      },
+      "specs": {
+        "es": [
+          "Vatímetro direccional",
+          "Elementos intercambiables"
+        ],
+        "en": [
+          "Directional wattmeter",
+          "Plug-in elements"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "ranger-neo",
+      "linea": "rf",
+      "marca": "PROMAX",
+      "nombre": "RANGER Neo+",
+      "disp": "pedido",
+      "img": "https://www.promax.es/assets/images/products/sliderProductos/ranger-neo-p/home.jpg",
+      "desc": {
+        "es": "Medidor de campo para TV, cable y satélite",
+        "en": "Field meter for TV, cable and satellite"
+      },
+      "specs": {
+        "es": [
+          "Medidor de campo",
+          "TV, cable y satélite"
+        ],
+        "en": [
+          "Field strength meter",
+          "TV, cable and satellite"
+        ]
+      }
+    },
+    {
+      "id": "prose-bts",
+      "linea": "infra",
+      "marca": "PROSE",
+      "oficial": true,
+      "nombre": "Antenas BTS",
+      "disp": "pedido",
+      "img": "img/equipos/prose-bts.jpg",
+      "desc": {
+        "es": "Antenas de estación base multibanda",
+        "en": "Multiband base station antennas"
+      },
+      "specs": {
+        "es": [
+          "2G, 3G, 4G y 5G",
+          "Multibanda"
+        ],
+        "en": [
+          "2G, 3G, 4G and 5G",
+          "Multiband"
+        ]
+      }
+    },
+    {
+      "id": "prose-das",
+      "linea": "infra",
+      "marca": "PROSE",
+      "oficial": true,
+      "nombre": "Sistemas DAS",
+      "disp": "pedido",
+      "img": "img/equipos/prose-das.jpg",
+      "desc": {
+        "es": "Cobertura celular dentro de edificios",
+        "en": "In-building cellular coverage"
+      },
+      "specs": {
+        "es": [
+          "Pasivos o activos",
+          "Varios operadores"
+        ],
+        "en": [
+          "Passive or active",
+          "Multi-operator"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "prose-camuflaje",
+      "linea": "infra",
+      "marca": "PROSE",
+      "oficial": true,
+      "nombre": "Camuflaje arquitectónico",
+      "disp": "pedido",
+      "img": "img/equipos/prose-camuflaje.jpg",
+      "desc": {
+        "es": "Antenas integradas al aspecto del edificio",
+        "en": "Antennas blended into the building"
+      },
+      "specs": {
+        "es": [
+          "A la medida del sitio",
+          "Tubo, aire acondicionado o piedra"
+        ],
+        "en": [
+          "Built for each site",
+          "Pipe, A/C unit or rock"
+        ]
+      }
+    },
+    {
+      "id": "prose-microondas",
+      "linea": "infra",
+      "marca": "PROSE",
+      "oficial": true,
+      "nombre": "Antenas de microondas",
+      "disp": "pedido",
+      "img": "img/equipos/prose-microondas.jpg",
+      "desc": {
+        "es": "Enlaces punto a punto de alta capacidad",
+        "en": "High-capacity point-to-point links"
+      },
+      "specs": {
+        "es": [
+          "Backhaul punto a punto",
+          "Alta capacidad"
+        ],
+        "en": [
+          "Point-to-point backhaul",
+          "High capacity"
+        ]
+      }
+    },
+    {
+      "id": "khipu-micro",
+      "linea": "dc",
+      "marca": "KHIPU",
+      "oficial": true,
+      "nombre": "Micro Data Center",
+      "disp": "pedido",
+      "img": "",
+      "dibujo": "gabinete",
+      "desc": {
+        "es": "Gabinete con energía, clima y monitoreo integrados",
+        "en": "Cabinet with built-in power, cooling and monitoring"
+      },
+      "specs": {
+        "es": [
+          "Modular y preensamblado",
+          "Listo para conectar"
+        ],
+        "en": [
+          "Modular, pre-assembled",
+          "Plug and play"
+        ]
+      },
+      "portada": true
+    },
+    {
+      "id": "khipu-modular",
+      "linea": "dc",
+      "marca": "KHIPU",
+      "oficial": true,
+      "nombre": "Data Center modular",
+      "disp": "pedido",
+      "img": "",
+      "dibujo": "contenedor",
+      "desc": {
+        "es": "Data center que crece por módulos",
+        "en": "Data center that grows by modules"
+      },
+      "specs": {
+        "es": [
+          "Escalable por módulos",
+          "Refrigeración integrada"
+        ],
+        "en": [
+          "Scales by module",
+          "Integrated cooling"
+        ]
+      }
+    },
+    {
+      "id": "prose-site",
+      "linea": "dc",
+      "marca": "PROSE",
+      "oficial": true,
+      "nombre": "Componentes de sitio",
+      "disp": "stock",
+      "img": "",
+      "desc": {
+        "es": "Racks y accesorios certificados",
+        "en": "Certified racks and accessories"
+      },
+      "specs": {
+        "es": [
+          "Racks y accesorios",
+          "Certificados"
+        ],
+        "en": [
+          "Racks and accessories",
+          "Certified"
+        ]
+      },
+      "dibujo": "gabinete"
+    },
+    {
+      "id": "gl-tprobe",
+      "linea": "monitor",
+      "marca": "GL Communications",
+      "nombre": "tProbe T1/E1",
+      "disp": "pedido",
+      "img": "img/equipos/gl-tprobe.jpg",
+      "desc": {
+        "es": "Analizador portátil de enlaces T1 y E1",
+        "en": "Portable T1 and E1 link analyzer"
+      },
+      "specs": {
+        "es": [
+          "Analizador T1 y E1",
+          "Portátil"
+        ],
+        "en": [
+          "T1 and E1 analyzer",
+          "Portable"
+        ]
+      }
+    },
+    {
+      "id": "aem-testpro",
+      "linea": "monitor",
+      "marca": "AEM",
+      "nombre": "TestPro CV100",
+      "disp": "pedido",
+      "img": "img/equipos/aem-testpro.jpg",
+      "desc": {
+        "es": "Certificador de cableado de cobre y fibra",
+        "en": "Copper and fiber cabling certifier"
+      },
+      "specs": {
+        "es": [
+          "Certifica cobre y fibra",
+          "De mano"
+        ],
+        "en": [
+          "Copper and fiber",
+          "Handheld"
+        ]
+      },
+      "portada": true
+    }
+  ]
+}

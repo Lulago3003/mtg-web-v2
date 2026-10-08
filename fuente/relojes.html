@@ -1,81 +1,82 @@
+<!--meta
+titulo: Relojes y rastreadores GPS con precio | Meta Technology Global, Panamá || GPS watches and trackers with prices | Meta Technology Global, Panama
+descripcion: Relojes y rastreadores GPS en existencia en Panamá para niños, adultos mayores, salud y mascotas. Botón SOS, ubicación en el celular y llamadas. Precios a la vista. || GPS watches and trackers in stock in Panama for kids, older adults, health and pets. SOS button, location on your phone and calls. Prices shown.
+-->
 <!doctype html>
-<html lang="es-PA">
+<html lang="[[es-PA||en]]">
 <head>
 {{CABEZA}}
-<title>Relojes y rastreadores GPS con precio | Meta Technology Global, Panamá</title>
-<meta name="description" content="{{TOTAL_RELOJES}} relojes y rastreadores GPS en existencia en Panamá para niños, adultos mayores, salud y mascotas. Desde USD {{DESDE_RELOJES}}. Botón SOS, ubicación en el celular y llamadas.">
-<link rel="canonical" href="https://mtglobalpa.com/relojes.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Relojes y rastreadores GPS, desde USD {{DESDE_RELOJES}}">
-<meta property="og:description" content="Para niños, adultos mayores, salud y mascotas. En existencia en Panamá.">
-<meta property="og:url" content="https://mtglobalpa.com/relojes.html">
-<meta property="og:image" content="https://mtglobalpa.com/img/relojes/k-h05g-azul.png">
-<meta property="og:locale" content="es_PA">
-{{JSONLD_RELOJES}}
+{{RELOJES_JSONLD}}
 </head>
 <body>
 {{CABECERA}}
 
 <main id="contenido">
 
-  <section class="portada" style="padding-bottom:40px">
+  <section class="cabeza-pagina">
     <div class="envoltura">
-      <h1 class="titular">Relojes y rastreadores GPS</h1>
-      <p class="entrada">{{TOTAL_RELOJES}} modelos para niños, adultos mayores, salud y mascotas, todos en existencia en Panamá. Pídalo por WhatsApp y le confirmamos la entrega.</p>
-
-      <div class="filtros" role="group" aria-label="Filtrar por categoría">
-{{FILTROS}}
+      <div>
+        <p class="migas"><a href="index.html">[[Inicio||Home]]</a> / [[Relojes GPS||GPS watches]]</p>
+        <h1>[[Relojes y rastreadores GPS||GPS watches and trackers]]</h1>
+        <p class="portada-texto">[[{{RELOJES_TOTAL}} modelos para niños, adultos mayores, salud y mascotas, todos en existencia en Panamá. Vea dónde está cada uno desde su celular y reciba una llamada si aprietan el botón SOS.||{{RELOJES_TOTAL}} models for kids, older adults, health and pets, all in stock in Panama. See where each one is from your phone and get a call when they press SOS.]]</p>
+        <p class="precio-chip">[[Desde||From]] <strong>USD {{RELOJES_DESDE}}</strong></p>
       </div>
-      <p class="conteo" aria-live="polite" data-conteo>{{TOTAL_RELOJES}} modelos</p>
+      <div class="cabeza-foto acero trio-relojes"><img src="{{R}}img/relojes/k-fa103.png" alt="[[Reloj para niños K-FA103||K-FA103 kids watch]]"><img src="{{R}}img/relojes/e-v28c-negro.png" alt="[[Rastreador con botón SOS E-V28C||E-V28C tracker with SOS button]]"><img src="{{R}}img/relojes/p-fa58p.png" alt="[[Rastreador para collar P-FA58P||P-FA58P collar tracker]]"></div>
+    </div>
+  </section>
 
-      <div class="catalogo" data-catalogo data-whatsapp="{{WA_NUMERO}}">
-{{CATALOGO}}
+  <section class="seccion" style="padding-top:44px">
+    <div class="envoltura">
+      <div class="fichas" role="group" aria-label="[[Filtrar por categoría||Filter by category]]">
+{{RELOJES_FILTROS}}
+      </div>
+      <p class="conteo" aria-live="polite" data-conteo style="margin-top:14px">{{RELOJES_TOTAL}} [[modelos||models]]</p>
+      <div class="catalogo" data-catalogo>
+{{RELOJES_CATALOGO}}
       </div>
     </div>
   </section>
 
-  <section class="seccion seccion-acero">
+  <section class="seccion seccion-navy">
     <div class="envoltura">
-      <h2 class="titulo">Antes de comprar</h2>
+      <h2 class="seccion-titulo" style="margin-bottom:34px">[[Cómo empieza a usarlo||How to get started]]</h2>
+      <ol class="pasos">
+        <li><strong>[[Escríbanos||Message us]]</strong><p>[[Díganos para quién es y qué necesita que haga. Le recomendamos un modelo.||Tell us who it's for and what it needs to do. We'll recommend a model.]]</p></li>
+        <li><strong>[[Lo configuramos con usted||We set it up with you]]</strong><p>[[La SIM, la app en su teléfono y los números de emergencia.||The SIM, the app on your phone and the emergency numbers.]]</p></li>
+        <li><strong>[[Zonas seguras y contactos||Safe zones and contacts]]</strong><p>[[Marque la casa o la escuela y elija quién puede llamar al reloj.||Mark home or school and choose who can call the watch.]]</p></li>
+        <li><strong>[[Listo||Done]]</strong><p>[[Vea la ubicación, reciba alertas y hable con el reloj desde su celular.||See the location, get alerts and talk to the watch from your phone.]]</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="seccion seccion-gris">
+    <div class="envoltura">
+      <h2 class="seccion-titulo" style="margin-bottom:34px">[[Antes de comprar||Before you buy]]</h2>
       <div class="avisos">
-        <div>
-          <h3>Relojes 4G</h3>
-          <p>Llevan su propia SIM nano con datos y llamadas (VoLTE), así que funcionan aunque el niño o el abuelo estén lejos de su celular. El plan de la SIM se paga aparte con el operador.</p>
-        </div>
-        <div>
-          <h3>Relojes de salud</h3>
-          <p>El S-F3 y el S-ET488 se conectan a su celular por Bluetooth y no llevan SIM. Deben estar cerca del teléfono para pasar los datos a la app.</p>
-        </div>
-        <div>
-          <h3>La app</h3>
-          <p>Cada reloj usa la app gratuita del fabricante, para iPhone y Android. Le ayudamos a instalar la SIM y a vincular el reloj con su teléfono.</p>
-        </div>
-        <div>
-          <h3>Qué tan exacta es la ubicación</h3>
-          <p>Al aire libre, el GPS ubica el reloj con precisión. Bajo techo usa las redes WiFi y las antenas celulares cercanas, y la ubicación es aproximada.</p>
-        </div>
-        <div>
-          <h3>Mediciones de salud</h3>
-          <p>La presión, el ritmo cardiaco, el oxígeno y el ECG sirven de referencia para llevar un control. Estos relojes no son equipos médicos y no reemplazan la consulta.</p>
-        </div>
-        <div>
-          <h3>Botón SOS</h3>
-          <p>Usted registra en la app los números de emergencia. Al mantener presionado el botón unos 3 segundos, el reloj llama a esos números y avisa en la app.</p>
-        </div>
+        <div><h3>[[Relojes 4G||4G watches]]</h3><p>[[Llevan su propia SIM nano con datos y llamadas (VoLTE), así que funcionan aunque el niño o el abuelo estén lejos de su celular. El plan de la SIM se paga con el operador.||They carry their own nano SIM with data and calls (VoLTE), so they work even when the child or grandparent is far from your phone. The SIM plan is paid to the carrier.]]</p></div>
+        <div><h3>[[Relojes de salud||Health watches]]</h3><p>[[El S-F3 y el S-ET488 se conectan a su celular por Bluetooth y no llevan SIM. Deben estar cerca del teléfono para pasar los datos a la app.||The S-F3 and S-ET488 connect to your phone by Bluetooth and need no SIM. They must be near the phone to sync to the app.]]</p></div>
+        <div><h3>[[La app||The app]]</h3><p>[[Cada reloj usa la app gratuita del fabricante, para iPhone y Android. No hay mensualidad por la app.||Each watch uses the manufacturer's free app for iPhone and Android. There's no monthly fee for the app.]]</p></div>
+        <div><h3>[[Qué tan exacta es la ubicación||How accurate the location is]]</h3><p>[[Al aire libre el GPS ubica el reloj con precisión. Bajo techo usa las redes WiFi y las antenas celulares cercanas, y la ubicación es aproximada.||Outdoors, GPS locates the watch accurately. Indoors it uses nearby WiFi networks and cell towers, so the location is approximate.]]</p></div>
+        <div><h3>[[Mediciones de salud||Health readings]]</h3><p>[[La presión, el ritmo cardiaco, el oxígeno y el ECG sirven de referencia para llevar un control. Estos relojes no son equipos médicos y no reemplazan la consulta.||Blood pressure, heart rate, oxygen and ECG are for reference and tracking. These watches are not medical devices and don't replace a doctor's visit.]]</p></div>
+        <div><h3>[[Botón SOS||SOS button]]</h3><p>[[Usted registra en la app los números de emergencia. Al mantener presionado el botón unos 3 segundos, el reloj llama a esos números y avisa en la app.||You register the emergency numbers in the app. When the button is held for about 3 seconds, the watch calls those numbers and alerts the app.]]</p></div>
       </div>
     </div>
   </section>
 
-  <section class="seccion seccion-tinta">
-    <div class="envoltura">
-      <p class="contacto-grande">¿No sabe cuál escoger? Escríbanos al <a href="{{WA:Hola, quiero ayuda para escoger un reloj GPS.}}">6887-3065</a>.</p>
-      <p class="entrada">Díganos para quién es y qué necesita que haga, y le recomendamos un modelo.</p>
+  <section class="seccion seccion-navy">
+    <div class="envoltura dividido">
+      <div>
+        <h2 class="seccion-titulo">[[¿No sabe cuál escoger?||Not sure which one?]]</h2>
+        <p class="seccion-intro">[[Díganos para quién es y qué necesita que haga, y le recomendamos un modelo.||Tell us who it's for and what it needs to do, and we'll recommend a model.]]</p>
+      </div>
+      <div class="acciones" style="margin-top:0"><a class="boton boton-wa" href="{{WA:[[Hola, quiero ayuda para escoger un reloj GPS.||Hello, I'd like help choosing a GPS watch.]]}}">{{ICONO_WA}}WhatsApp {{WA_VISIBLE}}</a></div>
     </div>
   </section>
 
 </main>
 
 {{PIE}}
-<script src="js/sitio.js" defer></script>
+{{FLOTANTES}}
+{{SCRIPTS}}
 </body>
 </html>
