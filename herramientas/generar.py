@@ -23,7 +23,7 @@ DOMINIO = "https://mtglobalpa.com/"
 
 WA = "50768873065"
 WA_VISIBLE = "+507 6887-3065"
-CORREO = "administrativo@mtglobalpa.com"
+CORREO = "info@mtglobalpa.com"
 INSTAGRAM = "https://www.instagram.com/metatecglobal/"
 MAPA = "https://maps.app.goo.gl/wtqi5NnLH8ZkPtXU7"
 
@@ -120,7 +120,7 @@ def cabeza(meta, archivo, L, R):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800&family=Red+Hat+Text:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{R}css/estilo.css?v={VERSION}">
-<script>try{{if(localStorage.getItem("mtg-tema")==="oscuro")document.documentElement.setAttribute("data-tema","oscuro")}}catch(e){{}}</script>"""
+<script>try{{var t=localStorage.getItem("mtg-tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-tema","oscuro")}}catch(e){{}}</script>"""
 
 
 def barra_superior(archivo, L, R):
@@ -168,7 +168,7 @@ def tiles_productos(R):
     t.append(("medidor.html", "[[Medidor Inteligente||Smart Meter]]", "[[Consumo por circuito en su celular||Per-circuit usage on your phone]]",
               f'<img src="{R}img/fotos/tablero-con-pinzas.jpg" alt="" loading="lazy">', "foto-real"))
     t.append(("relojes.html", "[[Relojes GPS||GPS watches]]", f"[[{len(RELOJES['modelos'])} modelos, desde USD {min(m['precio'] for m in RELOJES['modelos'])}||{len(RELOJES['modelos'])} models, from USD {min(m['precio'] for m in RELOJES['modelos'])}]]",
-              f'<img src="{R}img/relojes/k-h05g-azul.png" alt="" loading="lazy">', "acero"))
+              f'<img src="{R}img/relojes/k-fa103.png" alt="" loading="lazy">', "acero"))
     t.append(("shockwatch.html", "[[Detectores de impacto||Impact indicators]]", "[[Etiquetas ShockWatch para su carga||ShockWatch labels for your cargo]]",
               f'<img src="{R}video/poster-shockwatch.jpg" alt="" loading="lazy">', "foto-real"))
     return t
@@ -389,14 +389,26 @@ def banda_lineas(R):
     )
 
 
-def marcas_franja():
-    destino = {"PROSE": "prose.html", "KHIPU": "data-centers.html"}
-    marcas = ["EXFO", "N-TEST", "PROSE", "KHIPU", "CRFS", "Bird", "PROMAX", "AEM", "GL Communications", "Emporia"]
-    out = []
-    for m in marcas:
-        href = destino.get(m) or ("medidor.html" if m == "Emporia" else f"catalogo.html?marca={quote(m)}")
-        out.append(f'<li><a href="{href}">{e(m)}</a></li>')
-    return "\n".join(out)
+MARCAS = [
+    # (nombre, logo, destino)
+    ("EXFO", "exfo.png", "catalogo.html?marca=EXFO"),
+    ("N-TEST", "ntest.png", "catalogo.html?marca=N-TEST"),
+    ("PROSE", "prose.png", "prose.html"),
+    ("CRFS", "crfs.svg", "catalogo.html?marca=CRFS"),
+    ("Bird", "bird.svg", "catalogo.html?marca=Bird"),
+    ("PROMAX", "promax.svg", "catalogo.html?marca=PROMAX"),
+    ("AEM", "aem.png", "catalogo.html?marca=AEM"),
+    ("GL Communications", "gl.png", "catalogo.html?marca=GL%20Communications"),
+    ("KHIPU", "khipu.svg", "data-centers.html"),
+    ("Emporia", "emporia.png", "medidor.html"),
+]
+
+
+def marcas_franja(R):
+    return "\n".join(
+        f'<li><a href="{destino}"><img src="{R}img/marcas/{logo}" alt="{e(nombre)}" loading="lazy"></a></li>'
+        for nombre, logo, destino in MARCAS
+    )
 
 
 # ---------------------------------------------------------------- relojes
@@ -418,6 +430,9 @@ def color_nombre(c, L):
 
 
 ORDEN_CAT = [c["id"] for c in RELOJES["categorias"]]
+# fotos recortadas de la lista de precios: se muestran más chicas para que no se vean borrosas
+FOTOS_BAJAS = {"k-fa92-negro.png", "k-fa92-rosado.png", "k-h05g-negro.png", "k-h05g-azul.png", "k-h05g-rosado.png",
+               "k-h11c.png", "e-v28c-blanco.png", "e-l16pro.png", "e-fa96s.png", "s-f3.png"}
 MODELOS = sorted(RELOJES["modelos"], key=lambda m: (ORDEN_CAT.index(m["categoria"]), m["precio"], m["modelo"]))
 
 
@@ -432,7 +447,7 @@ def tarjeta_reloj(m, L, R):
     if varios:
         botones = "".join(
             f'<button type="button" class="muestra" data-m="{e(c["color"])}" data-nombre="{e(color_nombre(c["color"], L))}" data-foto="{R}img/relojes/{e(c["foto"])}" '
-            f'data-existencias="{c["existencias"]}" aria-pressed="{"true" if i == 0 else "false"}" aria-label="{e(color_nombre(c["color"], L))}"></button>'
+            f'data-existencias="{c["existencias"]}" data-baja="{1 if c["foto"] in FOTOS_BAJAS else 0}" aria-pressed="{"true" if i == 0 else "false"}" aria-label="{e(color_nombre(c["color"], L))}"></button>'
             for i, c in enumerate(m["colores"])
         )
         muestras = f'<div class="colores">{botones}<span class="colores-nombre">{e(color_nombre(primero["color"], L))}</span></div>'
@@ -453,7 +468,7 @@ def tarjeta_reloj(m, L, R):
     return f"""<article class="reloj" data-categoria="{cat['id']}" data-color="{cat['color']}" data-modelo="{e(m['modelo'])}" data-precio="{m['precio']}">
   <div class="reloj-foto">
     <span class="reloj-cat"><span class="manga"></span>{e(categoria_nombre(cat['id'], L))}</span>
-    <img src="{R}img/relojes/{e(primero['foto'])}" alt="{e(m['modelo'])}, {e(alt_color)}" loading="lazy">
+    <img src="{R}img/relojes/{e(primero['foto'])}" alt="{e(m['modelo'])}, {e(alt_color)}" loading="lazy"{' class="baja"' if primero['foto'] in FOTOS_BAJAS else ''}>
   </div>
   <div class="reloj-cuerpo">
     <div><p class="reloj-modelo">{e(m['modelo'])}</p><h3>{e(nombre)}</h3></div>
@@ -476,7 +491,7 @@ def filtros_relojes(L):
 
 
 def grupos_relojes(L, R):
-    fotos = {"ninos": "k-h05g-azul.png", "mayores": "e-v28c-negro.png", "salud": "s-f3.png", "mascotas": "p-fa58p.png"}
+    fotos = {"ninos": "k-fa103.png", "mayores": "e-v28c-negro.png", "salud": "s-et488.png", "mascotas": "p-fa58p.png"}
     out = []
     for c in RELOJES["categorias"]:
         ms = [m for m in MODELOS if m["categoria"] == c["id"]]
@@ -556,7 +571,7 @@ def construir(texto, archivo, L, extra=None):
         "{{FLOTANTES}}": flotantes(L, R),
         "{{SCRIPTS}}": textos_js(L) + f'\n<script src="{R}js/sitio.js?v={VERSION}" defer></script>',
         "{{BANDA_LINEAS}}": banda_lineas(R),
-        "{{MARCAS}}": marcas_franja(),
+        "{{MARCAS}}": marcas_franja(R),
         "{{PRODUCTOS_POPULARES}}": productos_html(L, R, solo_portada=True),
         "{{PRODUCTOS_TODOS}}": productos_html(L, R),
         "{{PRODUCTOS_PROSE}}": "\n".join(tarjeta_producto(p, L, R) for p in PRODUCTOS if p["marca"] == "PROSE"),

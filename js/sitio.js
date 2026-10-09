@@ -30,6 +30,16 @@
       pintarTema();
     });
     pintarTema();
+    // si la persona no eligió, sigue el modo del teléfono o la computadora
+    try {
+      matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (ev) {
+        var elegido = null; try { elegido = localStorage.getItem("mtg-tema"); } catch (e) {}
+        if (elegido) return;
+        if (ev.matches) document.documentElement.setAttribute("data-tema", "oscuro");
+        else document.documentElement.removeAttribute("data-tema");
+        pintarTema();
+      });
+    } catch (e) {}
   }
 
   /* ---------- menú: paneles, menú del teléfono, WhatsApp flotante ---------- */
@@ -281,6 +291,7 @@
           muestras.forEach(function (o) { o.setAttribute("aria-pressed", o === m ? "true" : "false"); });
           var nombre = m.getAttribute("data-nombre");
           foto.src = m.getAttribute("data-foto");
+          foto.classList.toggle("baja", m.getAttribute("data-baja") === "1");
           foto.alt = modelo + ", " + nombre.toLowerCase();
           exist.textContent = m.getAttribute("data-existencias") + " " + T.existencia;
           nombreColor.textContent = nombre;
