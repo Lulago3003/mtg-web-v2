@@ -13,35 +13,6 @@
     try { var v = JSON.parse(localStorage.getItem(clave)); return v == null ? porDefecto : v; } catch (e) { return porDefecto; }
   }
 
-  /* ---------- modo oscuro ---------- */
-  var botonTema = $("[data-tema-boton]");
-  function pintarTema() {
-    var oscuro = document.documentElement.getAttribute("data-tema") === "oscuro";
-    if (!botonTema) return;
-    botonTema.setAttribute("aria-pressed", oscuro ? "true" : "false");
-    $("span", botonTema).textContent = oscuro ? T.temaClaro : T.temaOscuro;
-  }
-  if (botonTema) {
-    botonTema.addEventListener("click", function () {
-      var oscuro = document.documentElement.getAttribute("data-tema") !== "oscuro";
-      if (oscuro) document.documentElement.setAttribute("data-tema", "oscuro");
-      else document.documentElement.removeAttribute("data-tema");
-      try { localStorage.setItem("mtg-tema", oscuro ? "oscuro" : "claro"); } catch (e) {}
-      pintarTema();
-    });
-    pintarTema();
-    // si la persona no eligió, sigue el modo del teléfono o la computadora
-    try {
-      matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (ev) {
-        var elegido = null; try { elegido = localStorage.getItem("mtg-tema"); } catch (e) {}
-        if (elegido) return;
-        if (ev.matches) document.documentElement.setAttribute("data-tema", "oscuro");
-        else document.documentElement.removeAttribute("data-tema");
-        pintarTema();
-      });
-    } catch (e) {}
-  }
-
   /* ---------- menú: paneles, menú del teléfono, WhatsApp flotante ---------- */
   var paneles = $$("[data-panel]");
   function cerrarPaneles(excepto) {
