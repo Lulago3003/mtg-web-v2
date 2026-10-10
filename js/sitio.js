@@ -256,7 +256,7 @@
     relojes.forEach(function (r) {
       var muestras = $$(".muestra", r), foto = $(".reloj-foto img", r), exist = $(".existencias", r);
       var nombreColor = $(".colores-nombre", r), boton = $(".boton-wa", r);
-      var modelo = r.getAttribute("data-modelo"), precio = r.getAttribute("data-precio");
+      var modelo = r.getAttribute("data-modelo");
       muestras.forEach(function (m) {
         m.addEventListener("click", function () {
           muestras.forEach(function (o) { o.setAttribute("aria-pressed", o === m ? "true" : "false"); });
@@ -266,7 +266,7 @@
           foto.alt = modelo + ", " + nombre.toLowerCase();
           exist.textContent = m.getAttribute("data-existencias") + " " + T.existencia;
           nombreColor.textContent = nombre;
-          boton.href = waUrl(fmt(T.relojWa, { modelo: modelo, precio: precio, color: " " + T.enColor + " " + nombre.toLowerCase() }));
+          boton.href = waUrl(fmt(T.relojWa, { modelo: modelo, color: " " + T.enColor + " " + nombre.toLowerCase() }));
         });
       });
     });

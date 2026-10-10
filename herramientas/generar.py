@@ -165,7 +165,7 @@ def tiles_productos(R):
         t.append((l["archivo"], f'[[{l["nombre"]["es"]}||{l["nombre"]["en"]}]]', f'[[{l["corto"]["es"]}||{l["corto"]["en"]}]]', foto, ""))
     t.append(("medidor.html", "[[Medidor Inteligente||Smart Meter]]", "[[Consumo por circuito en su celular||Per-circuit usage on your phone]]",
               f'<img src="{R}img/fotos/tablero-con-pinzas.jpg" alt="" loading="lazy">', "foto-real"))
-    t.append(("relojes.html", "[[Relojes GPS||GPS watches]]", f"[[{len(RELOJES['modelos'])} modelos, desde USD {min(m['precio'] for m in RELOJES['modelos'])}||{len(RELOJES['modelos'])} models, from USD {min(m['precio'] for m in RELOJES['modelos'])}]]",
+    t.append(("relojes.html", "[[Relojes GPS||GPS watches]]", f"[[{len(RELOJES['modelos'])} modelos en existencia||{len(RELOJES['modelos'])} models in stock]]",
               f'<img src="{R}img/relojes/k-fa103.png" alt="" loading="lazy">', "acero"))
     t.append(("shockwatch.html", "[[Detectores de impacto||Impact indicators]]", "[[Etiquetas ShockWatch para su carga||ShockWatch labels for your cargo]]",
               f'<img src="{R}video/poster-shockwatch.jpg" alt="" loading="lazy">', "foto-real"))
@@ -296,7 +296,7 @@ def textos_js(L):
             "agregar": "Agregar a cotización", "agregado": "En la cotización", "productos1": "1 producto", "productosN": "{n} productos",
             "barra1": "1 equipo en su cotización", "barraN": "{n} equipos en su cotización", "comparar": "Comparar ({n})",
             "modelos1": "1 modelo", "modelosN": "{n} modelos", "existencia": "en existencia", "enColor": "en color",
-            "relojWa": "Hola, me interesa el reloj {modelo}{color} de USD {precio}. ¿Está disponible?",
+            "relojWa": "Hola, me interesa el reloj {modelo}{color}. ¿Está disponible y qué precio tiene?",
             "cotizarWa": "Hola, quiero cotizar estos equipos:", "cotizarCierre": "¿Me pueden enviar precio y tiempo de entrega?",
             "buscarWa": "Hola, ¿tienen disponible {q}?", "quitar": "Quitar", "vacia": "Todavía no agregó equipos. Use el botón «Agregar a cotización» en el catálogo.",
             "compararMax": "Puede comparar hasta 3 equipos a la vez.", "marca": "Marca", "linea": "Línea", "desc": "Para qué sirve",
@@ -309,7 +309,7 @@ def textos_js(L):
             "agregar": "Add to quote", "agregado": "In your quote", "productos1": "1 product", "productosN": "{n} products",
             "barra1": "1 item in your quote", "barraN": "{n} items in your quote", "comparar": "Compare ({n})",
             "modelos1": "1 model", "modelosN": "{n} models", "existencia": "in stock", "enColor": "in",
-            "relojWa": "Hello, I'm interested in the {modelo} watch{color} at USD {precio}. Is it available?",
+            "relojWa": "Hello, I'm interested in the {modelo} watch{color}. Is it available, and what's the price?",
             "cotizarWa": "Hello, I'd like a quote for this equipment:", "cotizarCierre": "Could you send me price and lead time?",
             "buscarWa": "Hello, do you have {q} available?", "quitar": "Remove", "vacia": "You haven't added anything yet. Use the “Add to quote” button in the catalog.",
             "compararMax": "You can compare up to 3 items at a time.", "marca": "Brand", "linea": "Line", "desc": "What it's for",
@@ -440,8 +440,8 @@ def tarjeta_reloj(m, L, R):
     primero = m["colores"][0]
     varios = len(m["colores"]) > 1
     color_txt = (f" en color {primero['color'].lower()}" if L == "es" else f" in {color_nombre(primero['color'], L).lower()}") if varios else ""
-    texto_wa = (f"Hola, me interesa el reloj {m['modelo']}{color_txt} de USD {m['precio']}. ¿Está disponible?" if L == "es"
-                else f"Hello, I'm interested in the {m['modelo']} watch{color_txt} at USD {m['precio']}. Is it available?")
+    texto_wa = (f"Hola, me interesa el reloj {m['modelo']}{color_txt}. ¿Está disponible y qué precio tiene?" if L == "es"
+                else f"Hello, I'm interested in the {m['modelo']} watch{color_txt}. Is it available, and what's the price?")
     if varios:
         botones = "".join(
             f'<button type="button" class="muestra" data-m="{e(c["color"])}" data-nombre="{e(color_nombre(c["color"], L))}" data-foto="{R}img/relojes/{e(c["foto"])}" '
@@ -463,14 +463,14 @@ def tarjeta_reloj(m, L, R):
     if m.get("por_confirmar"):
         notas.append("[[Le enviamos la ficha técnica completa por WhatsApp.||We'll send you the full spec sheet on WhatsApp.]]")
     alt_color = color_nombre(primero["color"], L).lower()
-    return f"""<article class="reloj" data-categoria="{cat['id']}" data-color="{cat['color']}" data-modelo="{e(m['modelo'])}" data-precio="{m['precio']}">
+    return f"""<article class="reloj" data-categoria="{cat['id']}" data-color="{cat['color']}" data-modelo="{e(m['modelo'])}">
   <div class="reloj-foto">
     <span class="reloj-cat"><span class="manga"></span>{e(categoria_nombre(cat['id'], L))}</span>
     <img src="{R}img/relojes/{e(primero['foto'])}" alt="{e(m['modelo'])}, {e(alt_color)}" loading="lazy"{' class="baja"' if primero['foto'] in FOTOS_BAJAS else ''}>
   </div>
   <div class="reloj-cuerpo">
     <div><p class="reloj-modelo">{e(m['modelo'])}</p><h3>{e(nombre)}</h3></div>
-    <div class="precio-fila"><span class="precio"><small>USD</small>{m['precio']}</span><span class="existencias">{primero['existencias']} [[en existencia||in stock]]</span></div>
+    <p class="existencias">{primero['existencias']} [[en existencia||in stock]]</p>
     {muestras}
     <ul class="funciones">{''.join(f'<li>{e(f)}</li>' for f in funciones)}</ul>
     <p class="reloj-datos">{''.join(f'<span>{d}</span>' for d in datos)}</p>
@@ -493,11 +493,10 @@ def grupos_relojes(L, R):
     out = []
     for c in RELOJES["categorias"]:
         ms = [m for m in MODELOS if m["categoria"] == c["id"]]
-        desde = min(m["precio"] for m in ms)
         if L == "es":
-            txt = f"1 modelo, USD {desde}" if len(ms) == 1 else f"{len(ms)} modelos, desde USD {desde}"
+            txt = "1 modelo" if len(ms) == 1 else f"{len(ms)} modelos"
         else:
-            txt = f"1 model, USD {desde}" if len(ms) == 1 else f"{len(ms)} models, from USD {desde}"
+            txt = "1 model" if len(ms) == 1 else f"{len(ms)} models"
         out.append(f'<a class="grupo" href="relojes.html#{c["id"]}" data-color="{c["color"]}"><span class="grupo-foto"><img src="{R}img/relojes/{fotos[c["id"]]}" alt="" loading="lazy"></span>'
                    f'<span class="grupo-texto"><strong><span class="manga"></span>{e(categoria_nombre(c["id"], L))}</strong><span>{txt}</span></span></a>')
     return "\n".join(out)
@@ -510,8 +509,7 @@ def jsonld_relojes(L):
         items.append({"@type": "ListItem", "position": i, "item": {
             "@type": "Product", "name": f"{m['modelo']}, {nombre}", "sku": m["modelo"],
             "image": f"{DOMINIO}img/relojes/{m['colores'][0]['foto']}", "description": "; ".join(funciones),
-            "offers": {"@type": "Offer", "price": f"{m['precio']:.2f}", "priceCurrency": "USD", "availability": "https://schema.org/InStock",
-                       "seller": {"@type": "Organization", "name": "Meta Technology Global"}}}})
+            "brand": {"@type": "Organization", "name": "Meta Technology Global"}}})
     return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": items}, ensure_ascii=False) + "</script>"
 
 
