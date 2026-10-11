@@ -1,5 +1,5 @@
 {
-  "_nota": "Líneas de producto. Cada una genera su página (archivo). 'pdf' es el catálogo del fabricante o de MTG.",
+  "_nota": "Líneas de producto. Cada una genera su página (archivo). 'pdfs' son los catálogos en PDF de esa línea (el nombre del archivo en Drive dice de qué es cada uno).",
   "lineas": [
     {
       "id": "fibra",
@@ -41,11 +41,18 @@
         ]
       },
       "foto": "img/equipos/axs-120.jpg",
-      "pdf": "https://drive.google.com/file/d/1QPjQ9Acu7P5cE2pNSzg5G4SVH9Ak764g/view",
-      "pdf_nombre": {
-        "es": "Catálogo de fibra óptica (PDF)",
-        "en": "Fiber optics catalog (PDF)"
-      }
+      "pdfs": [
+        {
+          "url": "https://drive.google.com/file/d/1QPjQ9Acu7P5cE2pNSzg5G4SVH9Ak764g/view",
+          "es": "Catálogo de fibra activa (PDF)",
+          "en": "Active fiber catalog (PDF)"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1GTKGRNG5K_xxnGrjNMtSSk9qVoPnYeQX/view",
+          "es": "Catálogo de fibra pasiva (PDF)",
+          "en": "Passive fiber catalog (PDF)"
+        }
+      ]
     },
     {
       "id": "rf",
@@ -87,11 +94,7 @@
         ]
       },
       "foto": "img/equipos/rfeye-node.jpg",
-      "pdf": "",
-      "pdf_nombre": {
-        "es": "",
-        "en": ""
-      }
+      "pdfs": []
     },
     {
       "id": "infra",
@@ -130,11 +133,13 @@
         ]
       },
       "foto": "img/equipos/prose-bts.jpg",
-      "pdf": "https://drive.google.com/file/d/1h2aDG8XvZlbC_u0uSnzkbX5ByJukNEjU/view",
-      "pdf_nombre": {
-        "es": "Catálogo de infraestructura (PDF)",
-        "en": "Infrastructure catalog (PDF)"
-      }
+      "pdfs": [
+        {
+          "url": "https://drive.google.com/file/d/1h2aDG8XvZlbC_u0uSnzkbX5ByJukNEjU/view",
+          "es": "Catálogo de instalación de sitios PROSE (PDF)",
+          "en": "PROSE site installation catalog (PDF)"
+        }
+      ]
     },
     {
       "id": "dc",
@@ -177,11 +182,7 @@
       },
       "foto": "",
       "dibujo": "gabinete",
-      "pdf": "https://drive.google.com/file/d/1GTKGRNG5K_xxnGrjNMtSSk9qVoPnYeQX/view",
-      "pdf_nombre": {
-        "es": "Catálogo de data centers (PDF)",
-        "en": "Data center catalog (PDF)"
-      }
+      "pdfs": []
     },
     {
       "id": "monitor",
@@ -220,11 +221,7 @@
         ]
       },
       "foto": "img/equipos/fiberwatch-rtu.jpg",
-      "pdf": "",
-      "pdf_nombre": {
-        "es": "",
-        "en": ""
-      }
+      "pdfs": []
     }
   ]
 }

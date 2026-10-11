@@ -15,7 +15,7 @@
       "precio": 139,
       "conexion": "sim",
       "app": "SeTracker2",
-      "colores": [{"color": "Negro", "foto": "k-fa103.png", "existencias": 2}],
+      "colores": [{"color": "Negro", "foto": "k-fa103.webp", "existencias": 2}],
       "funciones": [
         "Ubicación en el mapa de su celular",
         "Videollamada y llamadas de voz con los contactos que usted aprueba",
@@ -33,8 +33,8 @@
       "precio": 139,
       "conexion": "sim",
       "colores": [
-        {"color": "Negro", "foto": "k-fa92-negro.png", "existencias": 5},
-        {"color": "Rosado", "foto": "k-fa92-rosado.png", "existencias": 1}
+        {"color": "Negro", "foto": "k-fa92-negro.webp", "existencias": 5},
+        {"color": "Rosado", "foto": "k-fa92-rosado.webp", "existencias": 1}
       ],
       "funciones": [
         "Ubicación por GPS, WiFi y antenas celulares",
@@ -54,9 +54,9 @@
       "precio": 139,
       "conexion": "sim",
       "colores": [
-        {"color": "Negro", "foto": "k-h05g-negro.png", "existencias": 2},
-        {"color": "Azul", "foto": "k-h05g-azul.png", "existencias": 2},
-        {"color": "Rosado", "foto": "k-h05g-rosado.png", "existencias": 2}
+        {"color": "Negro", "foto": "k-h05g-negro.webp", "existencias": 2},
+        {"color": "Azul", "foto": "k-h05g-azul.webp", "existencias": 2},
+        {"color": "Rosado", "foto": "k-h05g-rosado.webp", "existencias": 2}
       ],
       "funciones": [
         "Ubicación GPS en su celular",
@@ -73,7 +73,7 @@
       "nombre": "Reloj 4G para niños",
       "precio": 149,
       "conexion": "sim",
-      "colores": [{"color": "Azul", "foto": "k-h11c.png", "existencias": 1}],
+      "colores": [{"color": "Azul", "foto": "k-h11c.webp", "existencias": 1}],
       "funciones": [
         "Conexión 4G con su propia SIM",
         "Ubicación desde la app",
@@ -90,8 +90,8 @@
       "precio": 119,
       "conexion": "sim",
       "colores": [
-        {"color": "Negro", "foto": "e-v28c-negro.png", "existencias": 1},
-        {"color": "Blanco", "foto": "e-v28c-blanco.png", "existencias": 1}
+        {"color": "Negro", "foto": "e-v28c-negro.webp", "existencias": 1},
+        {"color": "Blanco", "foto": "e-v28c-blanco.webp", "existencias": 1}
       ],
       "funciones": [
         "Botón SOS grande al frente",
@@ -107,7 +107,7 @@
       "nombre": "Rastreador delgado con botón SOS",
       "precio": 129,
       "conexion": "sim",
-      "colores": [{"color": "Negro", "foto": "e-fa81.png", "existencias": 2}],
+      "colores": [{"color": "Negro", "foto": "e-fa81.webp", "existencias": 2}],
       "funciones": [
         "Botón SOS: llama hasta a 3 números y avisa por la app y por SMS",
         "Detección de caídas",
@@ -125,7 +125,7 @@
       "precio": 149,
       "conexion": "sim",
       "app": "SeTracker2",
-      "colores": [{"color": "Negro", "foto": "e-d17.png", "existencias": 2}],
+      "colores": [{"color": "Negro", "foto": "e-d17.webp", "existencias": 2}],
       "funciones": [
         "Botón SOS: llama a la familia al mantenerlo 3 segundos",
         "Contesta solo las llamadas de los números que usted elija",
@@ -142,7 +142,7 @@
       "nombre": "Reloj 4G para adultos mayores",
       "precio": 149,
       "conexion": "sim",
-      "colores": [{"color": "Negro", "foto": "e-fa96s.png", "existencias": 1}],
+      "colores": [{"color": "Negro", "foto": "e-fa96s.webp", "existencias": 1}],
       "funciones": [
         "Botón SOS",
         "Llamadas de voz",
@@ -158,7 +158,7 @@
       "nombre": "Banda GPS para adultos mayores",
       "precio": 199,
       "conexion": "sim",
-      "colores": [{"color": "Negro", "foto": "e-l16pro.png", "existencias": 1}],
+      "colores": [{"color": "Negro", "foto": "e-l16pro.webp", "existencias": 1}],
       "funciones": [
         "Ubicación GPS con conexión 4G",
         "Botón SOS",
@@ -174,7 +174,7 @@
       "precio": 229,
       "conexion": "sim",
       "app": "Ai care",
-      "colores": [{"color": "Negro", "foto": "e-l08pro.png", "existencias": 1}],
+      "colores": [{"color": "Negro", "foto": "e-l08pro.webp", "existencias": 1}],
       "funciones": [
         "Botón SOS: llama a 3 números uno por uno y envía una alerta",
         "Llamadas en ambos sentidos, hasta 20 contactos",
@@ -194,7 +194,7 @@
       "precio": 149,
       "conexion": "bluetooth",
       "app": "H Band",
-      "colores": [{"color": "Negro", "foto": "s-et488.png", "existencias": 1}],
+      "colores": [{"color": "Negro", "foto": "s-et488.webp", "existencias": 1}],
       "funciones": [
         "Electrocardiograma (ECG) desde la muñeca",
         "Temperatura corporal",
@@ -213,7 +213,7 @@
       "precio": 219,
       "conexion": "bluetooth",
       "app": "iCareFit",
-      "colores": [{"color": "Negro", "foto": "s-f3.png", "existencias": 1}],
+      "colores": [{"color": "Negro", "foto": "s-f3.webp", "existencias": 1}],
       "funciones": [
         "Mide la presión con una bolsa de aire en la correa, como un tensiómetro",
         "Ritmo cardiaco las 24 horas",
@@ -231,7 +231,7 @@
       "precio": 119,
       "conexion": "sim",
       "app": "Aibeile Plus",
-      "colores": [{"color": "Negro", "foto": "p-fa58p.png", "existencias": 2}],
+      "colores": [{"color": "Negro", "foto": "p-fa58p.webp", "existencias": 2}],
       "funciones": [
         "Ubicación por GPS, WiFi y antenas celulares",
         "Historial de recorridos de los últimos tres meses",

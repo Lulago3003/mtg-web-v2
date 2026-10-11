@@ -166,7 +166,7 @@ def tiles_productos(R):
     t.append(("medidor.html", "[[Medidor Inteligente||Smart Meter]]", "[[Consumo por circuito en su celular||Per-circuit usage on your phone]]",
               f'<img src="{R}img/fotos/tablero-con-pinzas.jpg" alt="" loading="lazy">', "foto-real"))
     t.append(("relojes.html", "[[Relojes GPS||GPS watches]]", f"[[{len(RELOJES['modelos'])} modelos en existencia||{len(RELOJES['modelos'])} models in stock]]",
-              f'<img src="{R}img/relojes/k-fa103.png" alt="" loading="lazy">', "acero"))
+              f'<img src="{R}img/relojes/k-fa103.webp" alt="" loading="lazy">', "acero"))
     t.append(("shockwatch.html", "[[Detectores de impacto||Impact indicators]]", "[[Etiquetas ShockWatch para su carga||ShockWatch labels for your cargo]]",
               f'<img src="{R}video/poster-shockwatch.jpg" alt="" loading="lazy">', "foto-real"))
     return t
@@ -192,7 +192,7 @@ def cabecera(archivo, L, R):
 {barra_superior(archivo, L, R)}
 <header class="cabecera">
   <div class="envoltura">
-    <a class="logo" href="index.html"><img src="{R}img/logo-mtg.png" alt="Meta Technology Global, [[inicio||home]]" width="605" height="239"></a>
+    <a class="logo" href="index.html"><img src="{R}img/logo-mtg-web.png" alt="Meta Technology Global, [[inicio||home]]" width="349" height="138"></a>
     <button type="button" class="menu-movil-boton" aria-expanded="false" aria-controls="menu-principal" data-menu-movil>{ICONO['menu']}[[Menú||Menu]]</button>
     <nav class="menu" id="menu-principal" aria-label="[[Principal||Main]]">
       <div class="menu-item">
@@ -223,7 +223,7 @@ def pie(L, R):
   <div class="envoltura">
     <div class="pie-grilla">
       <div>
-        <span class="pie-logo"><img src="{R}img/logo-mtg.png" alt="Meta Technology Global" width="605" height="239"></span>
+        <span class="pie-logo"><img src="{R}img/logo-mtg-web.png" alt="Meta Technology Global" width="349" height="138" loading="lazy"></span>
         <p>[[Empresa panameña de telecomunicaciones, energía y seguridad. En el sector desde 2008 y como Meta Technology Global desde 2022.||Panamanian telecom, energy and safety company. In the industry since 2008, and as Meta Technology Global since 2022.]]</p>
         <p>[[San Francisco, Ciudad de Panamá.||San Francisco, Panama City.]] <a href="{MAPA}">[[Cómo llegar||Directions]]</a></p>
       </div>
@@ -429,8 +429,8 @@ def color_nombre(c, L):
 
 ORDEN_CAT = [c["id"] for c in RELOJES["categorias"]]
 # fotos recortadas de la lista de precios: se muestran más chicas para que no se vean borrosas
-FOTOS_BAJAS = {"k-fa92-negro.png", "k-fa92-rosado.png", "k-h05g-negro.png", "k-h05g-azul.png", "k-h05g-rosado.png",
-               "k-h11c.png", "e-v28c-blanco.png", "e-l16pro.png", "e-fa96s.png", "s-f3.png"}
+FOTOS_BAJAS = {"k-fa92-negro.webp", "k-fa92-rosado.webp", "k-h05g-negro.webp", "k-h05g-azul.webp", "k-h05g-rosado.webp",
+               "k-h11c.webp", "e-v28c-blanco.webp", "e-l16pro.webp", "e-fa96s.webp", "s-f3.webp"}
 MODELOS = sorted(RELOJES["modelos"], key=lambda m: (ORDEN_CAT.index(m["categoria"]), m["precio"], m["modelo"]))
 
 
@@ -489,7 +489,7 @@ def filtros_relojes(L):
 
 
 def grupos_relojes(L, R):
-    fotos = {"ninos": "k-fa103.png", "mayores": "e-v28c-negro.png", "salud": "s-et488.png", "mascotas": "p-fa58p.png"}
+    fotos = {"ninos": "k-fa103.webp", "mayores": "e-v28c-negro.webp", "salud": "s-et488.webp", "mascotas": "p-fa58p.webp"}
     out = []
     for c in RELOJES["categorias"]:
         ms = [m for m in MODELOS if m["categoria"] == c["id"]]
@@ -518,7 +518,7 @@ def jsonld_relojes(L):
 def bloques_linea(l, L, R):
     foto = (f'<div class="cabeza-foto"><img src="{e(ruta(l["foto"], R))}" alt="" data-respaldo="{e(l["nombre"][L])}"></div>' if l["foto"]
             else f'<div class="cabeza-foto">{DIBUJO[l.get("dibujo", "gabinete")]}</div>')
-    pdf = (f'<a class="boton boton-borde-claro" href="{e(l["pdf"])}">{e(l["pdf_nombre"][L])}</a>' if l["pdf"] else "")
+    pdf = "".join(f'<a class="boton boton-borde-claro" href="{e(p["url"])}">{e(p[L])}</a>' for p in l["pdfs"])
     otras = "".join(f'<a href="{o["archivo"]}">{e(o["nombre"][L])}</a>' for o in LINEAS if o["id"] != l["id"])
     texto_wa = (f"Hola, me interesa la línea de {l['nombre']['es'].lower()}. Necesito cotizar:" if L == "es"
                 else f"Hello, I'm interested in your {l['nombre']['en'].lower()} line. I need a quote for:")
@@ -592,7 +592,7 @@ def construir(texto, archivo, L, extra=None):
         "{{RELOJES_TOTAL}}": str(len(MODELOS)),
         "{{RELOJES_DESDE}}": str(min(m["precio"] for m in MODELOS)),
         "{{CATALOGOS_PDF}}": "".join(
-            f'<li><a href="{e(l["pdf"])}">{e(l["pdf_nombre"][L])}</a></li>' for l in LINEAS if l["pdf"]
+            f'<li><a href="{e(p["url"])}">{e(p[L])}</a></li>' for l in LINEAS for p in l["pdfs"]
         ) + f'<li><a href="{R}img/prose/prose-camouflage-catalog.pdf">[[Antenas camufladas PROSE (PDF)||PROSE camouflaged antennas (PDF)]]</a></li>',
         "{{WA}}": wa(),
         "{{WA_VISIBLE}}": WA_VISIBLE,
