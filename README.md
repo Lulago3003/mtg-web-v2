@@ -24,9 +24,19 @@ Los `.html` de la raíz y de `en/` se generan solos: no se editan a mano.
 
 ## Publicar en mtglobalpa.com
 
-`python3 herramientas/generar.py --publicar` quita el aviso de vista previa y el `noindex`.
+La web oficial vive en el repositorio `mtg-pagina-web`: Cloudflare la despliega sola cada vez que se sube un cambio.
+Para publicar lo que hay aquí:
+
+    zsh herramientas/publicar.sh "Qué cambió"
+
+El script arma la versión final (sin aviso de vista previa, sin `noindex`, con enlaces sin `.html`), la copia a
+`mtg-pagina-web` y la sube. Este repositorio (`mtg-web-v2`) sigue siendo la vista previa en GitHub Pages.
+
+Para volver a una versión anterior de la web oficial: `git revert` del commit correspondiente en `mtg-pagina-web`.
+La página vieja de una sola hoja quedó en el commit `51c656f`.
 
 ## Fotos
+
 
 - `img/fotos/` y `video/`: fotos y videos reales de MTG (salen de sus videos promocionales).
 - `img/equipos/`: fotos oficiales de los fabricantes, guardadas en el sitio para no depender de sus servidores.

@@ -553,6 +553,16 @@ def leer_meta(texto, L):
     return meta, FRONT.sub("", texto, count=1)
 
 
+def sin_extension(texto):
+    """En mtglobalpa.com, Cloudflare sirve las páginas sin .html y redirige las que lo llevan:
+    los enlaces internos y las direcciones canónicas se escriben ya sin la extensión."""
+    texto = re.sub(r'(href|content)="(https://mtglobalpa\.com/(?:en/)?)index\.html"', r'\1="\2"', texto)
+    texto = re.sub(r'(href|content)="(https://mtglobalpa\.com/(?:en/)?[a-z0-9-]+)\.html"', r'\1="\2"', texto)
+    texto = re.sub(r'href="((?:\.\./|en/)?)index\.html(#[^"]*)?"', lambda m: f'href="{m.group(1) or "./"}{m.group(2) or ""}"', texto)
+    texto = re.sub(r'href="((?:\.\./|en/)?)([a-z0-9-]+)\.html', r'href="\1\2', texto)
+    return texto
+
+
 def construir(texto, archivo, L, extra=None):
     R = "" if L == "es" else "../"
     meta, texto = leer_meta(texto, L)
@@ -600,6 +610,8 @@ def construir(texto, archivo, L, extra=None):
     texto = idioma(texto, L)
     # enlaces de WhatsApp con mensaje: {{WA:mensaje}}
     texto = re.sub(r"\{\{WA:(.*?)\}\}", lambda m: e(wa(html.unescape(m.group(1)))), texto, flags=re.S)
+    if PUBLICAR:
+        texto = sin_extension(texto)
     if "{{" in texto or "[[" in texto:
         resto = re.findall(r"(\{\{.*?\}\}|\[\[.{0,40})", texto)[:3]
         raise SystemExit(f"{L}/{archivo}: quedaron marcadores sin reemplazar: {resto}")
@@ -618,6 +630,24 @@ def main():
             extra = bloques_linea(l, L, "" if L == "es" else "../")
             (destino / l["archivo"]).write_text(construir(plantilla_linea, l["archivo"], L, extra), encoding="utf-8")
         print(L, "listo:", len(plantillas) + len(LINEAS), "páginas")
+    if PUBLICAR:
+        escribir_sitemap([p.stem for p in plantillas] + [l["archivo"][:-5] for l in LINEAS])
+
+
+def escribir_sitemap(paginas):
+    """sitemap.xml y robots.txt para mtglobalpa.com, con las direcciones sin .html."""
+    paginas = ["index"] + sorted(p for p in paginas if p != "index")
+    def url(p, en=False):
+        return DOMINIO + ("en/" if en else "") + ("" if p == "index" else p)
+    filas = []
+    for p in paginas:
+        for en in (False, True):
+            filas.append(f'  <url>\n    <loc>{url(p, en)}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="{url(p)}"/>\n'
+                         f'    <xhtml:link rel="alternate" hreflang="en" href="{url(p, True)}"/>\n    <changefreq>monthly</changefreq>\n'
+                         f'    <priority>{"1.0" if p == "index" and not en else "0.7"}</priority>\n  </url>')
+    (RAIZ / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                      'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(filas) + "\n</urlset>\n", encoding="utf-8")
+    (RAIZ / "robots.txt").write_text("# Meta Technology Global\nUser-agent: *\nAllow: /\n\nSitemap: https://mtglobalpa.com/sitemap.xml\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
